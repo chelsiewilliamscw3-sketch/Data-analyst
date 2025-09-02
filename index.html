@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chelsie Williams — Finance Analyst Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .card { border-radius: 1rem; background: white; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">CW</div>
+        <span class="font-medium">Chelsie Williams</span>
+      </div>
+      <div class="flex gap-5 text-sm">
+        <a href="#skills" class="hover:underline">Skills</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#dashboards" class="hover:underline">Dashboards</a>
+        <a href="#sql" class="hover:underline">SQL</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="max-w-6xl mx-auto px-4 pt-10">
+    <h1 class="text-3xl font-semibold">Finance Analyst Portfolio & Insights</h1>
+    <p class="text-sm text-gray-600 mt-2">Forecasting • Variance • Quarterly Reporting • Tableau • SQL • PowerPoint</p>
+  </header>
+
+  <!-- Dashboards -->
+  <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-lg font-semibold mb-3">Tableau Showcase</h2>
+    <div class="card p-3">
+      <div class="aspect-video w-full">
+        <iframe
+          title="Finance Analyst Dashboard"
+          class="w-full h-full rounded-xl border"
+          src="https://public.tableau.com/views/MyFinanceDashboard/Sheet1?:showVizHome=no&:embed=true"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="text-xs text-gray-500 mt-2">
+        Interactive Tableau dashboard — explore KPIs, revenue vs budget, cost ratios, and segment profitability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-lg font-semibold mb-3">Skills & Tooling</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="card p-5"><h3 class="font-semibold mb-2">Modeling</h3><ul class="list-disc ml-5 text-sm"><li>Forecasting & Variance Analysis</li><li>Quarterly KPI Reporting</li><li>Scenario Modeling</li></ul></div>
+      <div class="card p-5"><h3 class="font-semibold mb-2">Visualization</h3><ul class="list-disc ml-5 text-sm"><li>Tableau Dashboards</li><li>Executive PPT Decks</li><li>Excel Reports</li></ul></div>
+      <div class="card p-5"><h3 class="font-semibold mb-2">SQL</h3><ul class="list-disc ml-5 text-sm"><li>Data Extraction</li><li>Joins & Aggregates</li><li>Window Functions</li></ul></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-lg font-semibold mb-3">Featured Projects</h2>
+    <div class="card p-5">
+      <p class="text-sm text-gray-600">Excel Forecasting Models, Variance Reporting, and Cash Flow Mini-Models showcased here.</p>
+    </div>
+  </section>
+
+  <!-- SQL -->
+  <section id="sql" class="max-w-6xl mx-auto px-4 pt-10 pb-12">
+    <h2 class="text-lg font-semibold mb-3">SQL Snippets</h2>
+    <div class="card p-5">
+      <pre class="bg-gray-50 p-3 rounded-lg text-xs border">WITH m AS (
+  SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter], Revenue, COGS, OpEx
+  FROM dbo.Finance
+)
+SELECT [Year], [Quarter], SUM(Revenue) AS Revenue,
+       SUM(Revenue-COGS-OpEx) AS NetIncome
+FROM m
+GROUP BY [Year], [Quarter]
+ORDER BY [Year], [Quarter];</pre>
+    </div>
+  </section>
+
+</body>
+</html>
