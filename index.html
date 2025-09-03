@@ -55,11 +55,11 @@
         <a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a>
       </div>
       <div class="text-sm mb-1"><span class="text-gray-500">Phone</span>: (832)-655-9876</div>
-      <div class="text-sm mb-1"><span class="text-gray-500">LinkedIn</span>: 
+      <div class="text-sm"><span class="text-gray-500">LinkedIn</span>: 
         <a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">View Profile</a>
       </div>
       <div class="text-sm"><span class="text-gray-500">Resume</span>: 
-        <a class="underline" href="Chelsie_Williams_Resume.pdf" target="_blank">Download Resume</a>
+        <a class="underline" href="Jr.%20Fin%20Analyst%20resume-fin%20template.pdf" target="_blank">Download PDF</a>
       </div>
     </div>
   </header>
@@ -92,59 +92,82 @@
     </div>
   </section>
 
-  <!-- Featured Projects -->
-  <section id="projects" class="max-w-6xl mx-auto px-4 pt-16">
-    <h2 class="text-lg font-semibold mb-4">Featured Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="card p-6">
-        <h3 class="font-semibold">Finance Analyst Dashboard (Tableau)</h3>
-        <p class="text-sm text-gray-600 mt-2">KPI tiles for Profit, Margin %, and Costs with variance reporting and drilldowns by country and year.</p>
-        <a href="#dashboards" class="underline text-sm mt-3 inline-block">View Dashboard</a>
-      </div>
-      <div class="card p-6">
-        <h3 class="font-semibold">Quarterly Variance SQL Report</h3>
-        <p class="text-sm text-gray-600 mt-2">SQL-driven variance analysis supporting forecasting, revenue, COGS, and OpEx by quarter.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Tableau Showcase -->
-  <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-16">
-    <h2 class="text-lg font-semibold mb-4">Tableau Showcase</h2>
+  <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-12">
+    <h2 class="text-lg font-semibold mb-2">Tableau Showcase</h2>
     <p class="text-sm text-gray-600 mb-4">
-      This dashboard showcases financial performance insights including KPIs for Profit, Margin %, CRR, and Growth, with variance analysis and drill-downs by year and country.
+      Interactive dashboards demonstrating financial insights, variance analysis, and operational reporting.
     </p>
-    <div class="card p-4">
-      <div class='tableauPlaceholder' id='viz1738567890' style='position: relative'>
-        <noscript>
-          <a href='#'><img alt='Dashboard' src='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1.png' style='border:none' /></a>
-        </noscript>
+
+    <!-- Existing Financial Analyst Dashboard -->
+    <div class="mb-12">
+      <h3 class="font-medium mb-2">Finance Analyst Dashboard</h3>
+      <div class='tableauPlaceholder' id='vizFinance' style='position: relative'>
+        <noscript><a href='#'><img alt='Finance Analyst Dashboard' src='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1_rss.png' style='border: none' /></a></noscript>
         <object class='tableauViz' style='display:none;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
           <param name='embed_code_version' value='3' /> 
+          <param name='site_root' value='' />
           <param name='name' value='FinancialAnalystDashboard/FinancialDashboard' />
-          <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1.png' /> 
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
         </object>
       </div>
-      <script type='text/javascript'> 
-        var divElement = document.getElementById('viz1738567890'); 
-        var vizElement = divElement.getElementsByTagName('object')[0]; 
-        vizElement.style.width='100%';vizElement.style.height='800px'; 
-        var scriptElement = document.createElement('script'); 
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-        vizElement.parentNode.insertBefore(scriptElement, vizElement); 
+      <script type='text/javascript'>                    
+        var divElement = document.getElementById('vizFinance');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        vizElement.style.width='100%';vizElement.style.height='800px';                    
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      </script>
+    </div>
+
+    <!-- ATM Cash Flow Analysis Dashboard -->
+    <div>
+      <h3 class="font-medium mb-2">ATM Cash Flow Analysis</h3>
+      <div class='tableauPlaceholder' id='vizATM' style='position: relative'>
+        <noscript><a href='#'><img alt='ATM Transactional Analysis' src='https://public.tableau.com/static/images/AT/ATMcashflowanalysis/ATMTransactionalAnalysis/1_rss.png' style='border: none' /></a></noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+          <param name='embed_code_version' value='3' /> 
+          <param name='site_root' value='' />
+          <param name='name' value='ATMcashflowanalysis/ATMTransactionalAnalysis' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/AT/ATMcashflowanalysis/ATMTransactionalAnalysis/1.png' /> 
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+      <script type='text/javascript'>                    
+        var divElement = document.getElementById('vizATM');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        vizElement.style.width='100%';vizElement.style.height='800px';                    
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
       </script>
     </div>
   </section>
 
   <!-- SQL Snippets -->
-  <section id="sql" class="max-w-6xl mx-auto px-4 pt-16">
+  <section id="sql" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">SQL Snippets</h2>
-    <div class="card p-6 overflow-x-auto">
-<pre class="text-xs">
+    <pre class="bg-gray-50 p-4 rounded text-sm overflow-x-auto">
 WITH m AS (
-  SELECT YEAR([Date]) AS [Year],
-         DATEPART(QUARTER, [Date]) AS [Quarter],
+  SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter],
          Revenue, COGS, OpEx
   FROM dbo.Finance
 )
@@ -154,18 +177,15 @@ SELECT [Year], [Quarter],
 FROM m
 GROUP BY [Year], [Quarter]
 ORDER BY [Year], [Quarter];
-</pre>
-    </div>
+    </pre>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 pt-16 pb-20">
-    <h2 class="text-lg font-semibold mb-4">Contact</h2>
-    <div class="card p-6">
-      <p class="text-sm">📧 Email: <a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a></p>
-      <p class="text-sm">🔗 LinkedIn: <a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">View Profile</a></p>
-      <p class="text-sm">📄 Resume: <a class="underline" href="Chelsie_Williams_Resume.pdf" target="_blank">Download Resume</a></p>
-    </div>
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 pt-12 pb-16">
+    <h2 class="text-lg font-semibold mb-4">Contact & Links</h2>
+    <p class="text-sm text-gray-600 mb-2">Get in touch</p>
+    <p><a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a></p>
+    <p><a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">LinkedIn</a></p>
   </section>
 
 </body>
