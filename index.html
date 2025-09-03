@@ -12,6 +12,13 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
+  <!-- Top Header -->
+  <header class="bg-white border-b">
+    <div class="max-w-6xl mx-auto px-4 py-6">
+      <h1 class="text-4xl font-bold text-gray-900">Chelsie Williams — Finance Analyst Portfolio</h1>
+    </div>
+  </header>
+
   <!-- Navbar -->
   <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -20,26 +27,42 @@
         <span class="font-medium">Chelsie Williams</span>
       </div>
       <div class="flex gap-5 text-sm">
-        <a href="#dashboards" class="hover:underline">Dashboard</a>
         <a href="#skills" class="hover:underline">Skills</a>
         <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#dashboards" class="hover:underline">Dashboards</a>
         <a href="#sql" class="hover:underline">SQL</a>
         <a href="#contact" class="hover:underline">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Tableau Dashboard FIRST -->
+  <!-- Hero -->
+  <header class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-2xl font-semibold">Finance Analyst Portfolio & Insights</h2>
+    <p class="text-sm text-gray-600 mt-2">Forecasting • Variance • Quarterly Reporting • Tableau • SQL • PowerPoint</p>
+  </header>
+
+  <!-- Dashboards -->
   <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-3">Finance Analyst Dashboard</h2>
+    <h2 class="text-lg font-semibold mb-2">Tableau Showcase</h2>
+    <p class="text-sm text-gray-600 mb-3">
+      <span class="font-medium">Data Source:</span> Embedded via Tableau Public.
+      This dashboard highlights <span class="font-medium">executive KPIs</span> for revenue, profit, and costs,
+      with YoY/QoQ trends, cost-to-revenue ratios, profit by country, and quarterly cost/profit analysis.
+      Use the filters and variable selector to explore performance drivers.
+    </p>
+
     <div class="card p-3">
-      <div class="aspect-video w-full">
+      <!-- Cropped wrapper: hides Tableau’s bottom watermark/“View on Tableau Public” -->
+      <div class="w-full overflow-hidden" style="height: 780px;">
         <iframe
           title="Finance Analyst Dashboard"
-          class="w-full h-[600px] rounded-xl border"
-          src="https://public.tableau.com/views/financialanalyst/Sheet1?:showVizHome=no&:embed=true"
-          allowfullscreen>
-        </iframe>
+          class="w-full rounded-xl border"
+          src="https://public.tableau.com/views/FinancialAnalystDashboard/FinancialDashboard?:showVizHome=no&:embed=true"
+          style="width: 100%; height: 820px; border: none; margin-bottom: -48px;"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   </section>
@@ -48,66 +71,73 @@
   <section id="skills" class="max-w-6xl mx-auto px-4 pt-10">
     <h2 class="text-lg font-semibold mb-3">Skills & Tooling</h2>
     <div class="grid md:grid-cols-3 gap-4">
-      <div class="card p-5"><h3 class="font-semibold mb-2">Modeling</h3><ul class="list-disc ml-5 text-sm"><li>Forecasting & Variance Analysis</li><li>Quarterly KPI Reporting</li><li>Scenario Modeling</li></ul></div>
-      <div class="card p-5"><h3 class="font-semibold mb-2">Visualization</h3><ul class="list-disc ml-5 text-sm"><li>Tableau Dashboards</li><li>Executive PPT Decks</li><li>Excel Reports</li></ul></div>
-      <div class="card p-5"><h3 class="font-semibold mb-2">SQL</h3><ul class="list-disc ml-5 text-sm"><li>Data Extraction</li><li>Joins & Aggregates</li><li>Window Functions</li></ul></div>
+      <div class="card p-5">
+        <h3 class="font-semibold mb-2">Modeling</h3>
+        <ul class="list-disc ml-5 text-sm">
+          <li>Forecasting & Variance Analysis</li>
+          <li>Quarterly KPI Reporting</li>
+          <li>Scenario Modeling</li>
+        </ul>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-semibold mb-2">Visualization</h3>
+        <ul class="list-disc ml-5 text-sm">
+          <li>Tableau Dashboards</li>
+          <li>Executive PPT Decks</li>
+          <li>Excel Reports</li>
+        </ul>
+      </div>
+      <div class="card p-5">
+        <h3 class="font-semibold mb-2">SQL</h3>
+        <ul class="list-disc ml-5 text-sm">
+          <li>Data Extraction</li>
+          <li>Joins & Aggregates</li>
+          <li>Window Functions</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="max-w-6xl mx-auto px-4 pt-10">
     <h2 class="text-lg font-semibold mb-3">Featured Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
 
-      <!-- Finance Analyst Dashboard -->
-      <div class="card p-5">
-        <p class="text-xs text-gray-500">2025</p>
-        <h3 class="font-semibold text-lg">Finance Analyst Dashboard (Tableau)</h3>
-        <p class="text-sm text-gray-600 mt-1">
-          KPI tiles for Profit, Margin %, Costs, and Cost-to-Revenue Ratio (CRR); Growth summary; Profit by Year & Country; Total Cost and Margin Profit per Quarter.
-        </p>
-        <div class="mt-2 flex flex-wrap gap-2 text-xs">
-          <span class="px-2 py-1 bg-gray-100 rounded">Tableau</span>
-          <span class="px-2 py-1 bg-gray-100 rounded">Variance Analysis</span>
-          <span class="px-2 py-1 bg-gray-100 rounded">Forecasting</span>
-        </div>
-        <ul class="list-disc ml-5 text-sm mt-3">
-          <li>Variance reporting with interactive dashboards</li>
-          <li>Cost-to-revenue ratio drill-downs</li>
-          <li>Executive-ready data storytelling</li>
-        </ul>
-      </div>
+    <div class="card p-5 mb-6">
+      <h3 class="text-xl font-semibold">Finance Analyst Dashboard (Tableau)</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        <span class="font-medium">What it shows:</span> KPI tiles for Profit, Margin %, and Costs; Cost-to-Revenue Ratio (CRR);
+        Growth summary; Profit by Year and by Country; Total Cost and Margin Profit per Quarter.
+        <span class="font-medium">Finance skills used:</span> forecasting, variance analysis, KPI design, executive reporting,
+        and data storytelling with drill-downs and parameter controls.
+      </p>
 
-      <!-- SQL Variance Report -->
-      <div class="card p-5">
-        <p class="text-xs text-gray-500">2025</p>
-        <h3 class="font-semibold text-lg">Quarterly Variance SQL Report</h3>
-        <p class="text-sm text-gray-600 mt-1">
-          SQL-driven financial reporting for quarterly Revenue, COGS, and OpEx with Net Income calculations. Supports forecasting and variance analysis.
-        </p>
-        <pre class="bg-gray-50 p-3 rounded-lg text-xs border mt-3">
-WITH m AS (
+      <div class="mt-4">
+        <h4 class="font-medium mb-1 text-sm">SQL snippet used to prep quarterly metrics</h4>
+        <pre class="bg-gray-50 p-3 rounded-lg text-xs border overflow-x-auto">WITH m AS (
   SELECT YEAR([Date]) AS [Year],
          DATEPART(QUARTER, [Date]) AS [Quarter],
          Revenue, COGS, OpEx
   FROM dbo.Finance
 )
-SELECT [Year], [Quarter],
+SELECT [Year],
+       [Quarter],
        SUM(Revenue) AS Revenue,
        SUM(Revenue-COGS-OpEx) AS NetIncome
 FROM m
 GROUP BY [Year], [Quarter]
-ORDER BY [Year], [Quarter];
-        </pre>
+ORDER BY [Year], [Quarter];</pre>
+      </div>
+      <div class="mt-3 text-sm">
+        <a class="underline" href="#dashboards">Jump to live dashboard ↑</a>
       </div>
     </div>
   </section>
 
-  <!-- SQL -->
+  <!-- SQL (kept for quick view) -->
   <section id="sql" class="max-w-6xl mx-auto px-4 pt-10 pb-12">
     <h2 class="text-lg font-semibold mb-3">SQL Snippets</h2>
     <div class="card p-5">
-      <pre class="bg-gray-50 p-3 rounded-lg text-xs border">WITH m AS (
+      <pre class="bg-gray-50 p-3 rounded-lg text-xs border overflow-x-auto">WITH m AS (
   SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter], Revenue, COGS, OpEx
   FROM dbo.Finance
 )
@@ -120,11 +150,18 @@ ORDER BY [Year], [Quarter];</pre>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 pt-10 pb-12">
+  <section id="contact" class="max-w-6xl mx-auto px-4 pt-6 pb-16">
     <h2 class="text-lg font-semibold mb-3">Contact</h2>
     <div class="card p-5">
-      <p>Email: <a href="mailto:chelsiewilliamscw3@gmail.com" class="text-blue-600 underline">chelsiewilliamscw3@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" class="text-blue-600 underline">Chelsie Williams</a></p>
+      <p class="text-sm">
+        Email: <a href="mailto:chelsiewilliamscw3@gmail.com" class="underline">chelsiewilliamscw3@gmail.com</a><br/>
+        LinkedIn:
+        <a class="underline"
+           href="https://www.linkedin.com/in/chelsie-williams-31a934166"
+           target="_blank" rel="noopener">
+          www.linkedin.com/in/chelsie-williams-31a934166
+        </a>
+      </p>
     </div>
   </section>
 
