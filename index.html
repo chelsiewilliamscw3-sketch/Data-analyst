@@ -1,18 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chelsie Williams — Finance Analyst Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .card { border-radius: 1rem; background: white; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">CW</div>
+        <span class="font-medium">Chelsie Williams</span>
+      </div>
+      <div class="flex gap-5 text-sm">
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#sql" class="hover:underline">SQL</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="max-w-6xl mx-auto px-4 pt-10">
+    <h1 class="text-3xl font-semibold">Finance Analyst Portfolio & Insights</h1>
+    <p class="text-sm text-gray-600 mt-2">Forecasting • Variance • Reporting • Tableau • SQL</p>
+  </header>
+
   <!-- Featured Projects -->
   <section id="projects" class="max-w-6xl mx-auto px-4 pt-10">
     <h2 class="text-lg font-semibold mb-3">Featured Projects</h2>
     <div class="grid md:grid-cols-1 gap-6">
 
-      <!-- Finance Analyst Dashboard project card -->
+      <!-- Finance Analyst Dashboard -->
       <article class="card p-6">
         <div class="text-xs text-gray-500 mb-1">2025</div>
         <h3 class="text-xl font-semibold">Finance Analyst Dashboard (Tableau)</h3>
         <p class="text-sm text-gray-600 mt-2">
-          <strong>What it shows:</strong> KPI tiles for Profit, Margin %, and Costs; 
-          Cost-to-Revenue Ratio (CRR); Growth summary; Profit by Year and by Country; 
-          Total Cost and Margin Profit per Quarter. 
-          <strong>Finance skills used:</strong> forecasting, variance analysis, KPI design, 
-          executive reporting, and data storytelling with drill-downs and parameter controls.
+          <strong>What it shows:</strong> KPI tiles for Profit, Margin %, and Costs; Cost-to-Revenue Ratio (CRR); Growth summary; Profit by Year and by Country; Total Cost and Margin Profit per Quarter. 
+          <strong>Finance skills used:</strong> forecasting, variance analysis, KPI design, executive reporting, and data storytelling with drill-downs and parameter controls.
         </p>
         <div class="mt-4">
           <a href="#dashboards" class="underline text-sm">Jump to Live Dashboard ↑</a>
@@ -26,14 +57,19 @@
   <section id="sql" class="max-w-6xl mx-auto px-4 pt-10 pb-12">
     <h2 class="text-lg font-semibold mb-3">SQL Snippets</h2>
     <div class="card p-5">
-<pre class="bg-gray-50 p-3 rounded-lg text-xs border overflow-x-auto">WITH m AS (
-  SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter], Revenue, COGS, OpEx
+      <pre class="bg-gray-50 p-3 rounded-lg text-xs border overflow-x-auto">WITH m AS (
+  SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter], 
+         Revenue, COGS, OpEx
   FROM dbo.Finance
 )
-SELECT [Year], [Quarter], SUM(Revenue) AS Revenue,
+SELECT [Year], [Quarter], 
+       SUM(Revenue) AS Revenue,
        SUM(Revenue-COGS-OpEx) AS NetIncome
 FROM m
 GROUP BY [Year], [Quarter]
 ORDER BY [Year], [Quarter];</pre>
     </div>
   </section>
+
+</body>
+</html>
