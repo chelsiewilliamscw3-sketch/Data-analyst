@@ -8,6 +8,12 @@
   <style>
     html { scroll-behavior: smooth; }
     .card { border-radius: 1rem; background: white; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .tableauPlaceholder iframe { border: none !important; }
+    .tableauPlaceholder .tab-toolbar, 
+    .tableauPlaceholder .footer, 
+    .tableauPlaceholder .vizFooter, 
+    .tableauPlaceholder .tab-iframe, 
+    .tableauPlaceholder [title="View on Tableau Public"] { display: none !important; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -64,7 +70,7 @@
     </div>
   </header>
 
-  <!-- Skills & Tooling (with emojis) -->
+  <!-- Skills & Tooling -->
   <section id="skills" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">Skills & Tooling</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -92,70 +98,57 @@
     </div>
   </section>
 
-  <!-- Tableau Showcase -->
+  <!-- Dashboards -->
   <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-12">
-    <h2 class="text-lg font-semibold mb-2">Tableau Showcase</h2>
-    <p class="text-sm text-gray-600 mb-4">
-      Interactive dashboards demonstrating financial insights, variance analysis, and operational reporting.
-    </p>
+    <h2 class="text-lg font-semibold mb-4">Tableau Dashboards</h2>
 
-    <!-- Existing Financial Analyst Dashboard -->
-    <div class="mb-12">
-      <h3 class="font-medium mb-2">Finance Analyst Dashboard</h3>
-      <div class='tableauPlaceholder' id='vizFinance' style='position: relative'>
-        <object class='tableauViz' style='display:none;'>
+    <!-- Financial Analyst Dashboard -->
+    <div class="card p-5 mb-8">
+      <h3 class="font-semibold mb-2">Financial Analyst Dashboard</h3>
+      <div class='tableauPlaceholder' id='vizFinancial'>
+        <object class='tableauViz'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
           <param name='embed_code_version' value='3' /> 
           <param name='site_root' value='' />
           <param name='name' value='FinancialAnalystDashboard/FinancialDashboard' />
-          <param name='tabs' value='no' />
-          <param name='toolbar' value='yes' />
-          <param name='showVizHome' value='n' />
-          <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
+          <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+          <param name='animate_transition' value='yes' /><param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
           <param name='language' value='en-US' />
         </object>
       </div>
-      <script type='text/javascript'>                    
-        var divElement = document.getElementById('vizFinance');                    
-        var vizElement = divElement.getElementsByTagName('object')[0];                    
-        vizElement.style.width='100%';vizElement.style.height='800px';                    
-        var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      <script type='text/javascript'> 
+        var divElement = document.getElementById('vizFinancial'); 
+        var vizElement = divElement.getElementsByTagName('object')[0]; 
+        vizElement.style.width='100%';vizElement.style.height='800px'; 
+        var scriptElement = document.createElement('script'); 
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+        vizElement.parentNode.insertBefore(scriptElement, vizElement); 
       </script>
     </div>
 
-    <!-- ATM Cash Flow Analysis Dashboard -->
-    <div>
-      <h3 class="font-medium mb-2">ATM Cash Flow Analysis</h3>
-      <div class='tableauPlaceholder' id='vizATM' style='position: relative'>
-        <object class='tableauViz' style='display:none;'>
+    <!-- ATM Cash Flow Dashboard -->
+    <div class="card p-5">
+      <h3 class="font-semibold mb-2">ATM Cash Flow Dashboard</h3>
+      <div class='tableauPlaceholder' id='vizATM'>
+        <object class='tableauViz'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
           <param name='embed_code_version' value='3' /> 
           <param name='site_root' value='' />
           <param name='name' value='ATMcashflowanalysis/ATMTransactionalAnalysis' />
-          <param name='tabs' value='no' />
-          <param name='toolbar' value='yes' />
-          <param name='showVizHome' value='n' />
-          <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
+          <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+          <param name='animate_transition' value='yes' /><param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
           <param name='language' value='en-US' />
         </object>
       </div>
-      <script type='text/javascript'>                    
-        var divElement = document.getElementById('vizATM');                    
-        var vizElement = divElement.getElementsByTagName('object')[0];                    
-        vizElement.style.width='100%';vizElement.style.height='800px';                    
-        var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      <script type='text/javascript'> 
+        var divElement = document.getElementById('vizATM'); 
+        var vizElement = divElement.getElementsByTagName('object')[0]; 
+        vizElement.style.width='100%';vizElement.style.height='1000px'; 
+        var scriptElement = document.createElement('script'); 
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+        vizElement.parentNode.insertBefore(scriptElement, vizElement); 
       </script>
     </div>
   </section>
@@ -163,8 +156,8 @@
   <!-- SQL Snippets -->
   <section id="sql" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">SQL Snippets</h2>
-    <pre class="bg-gray-50 p-4 rounded text-sm overflow-x-auto">
-WITH m AS (
+    <div class="card p-5">
+      <pre class="bg-gray-50 p-4 rounded-lg border text-xs md:text-sm leading-6 overflow-x-auto"><code>WITH m AS (
   SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter],
          Revenue, COGS, OpEx
   FROM dbo.Finance
@@ -174,16 +167,22 @@ SELECT [Year], [Quarter],
        SUM(Revenue-COGS-OpEx) AS NetIncome
 FROM m
 GROUP BY [Year], [Quarter]
-ORDER BY [Year], [Quarter];
-    </pre>
+ORDER BY [Year], [Quarter];</code></pre>
+    </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 pt-12 pb-16">
+  <!-- Contact & Links -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">Contact & Links</h2>
-    <p class="text-sm text-gray-600 mb-2">Get in touch</p>
-    <p><a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a></p>
-    <p><a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">LinkedIn</a></p>
+    <div class="card p-5">
+      <p class="text-sm text-gray-600 mb-3">Get in touch</p>
+      <p class="mb-2">
+        <a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a>
+      </p>
+      <p>
+        <a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">LinkedIn</a>
+      </p>
+    </div>
   </section>
 
 </body>
