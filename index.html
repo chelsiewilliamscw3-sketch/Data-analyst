@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
-    .card { border-radius: 1rem; background: #ffffff; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .card { border-radius: 1rem; background: white; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -31,86 +31,76 @@
 
   <!-- Hero -->
   <header class="max-w-6xl mx-auto px-4 pt-10">
-    <h1 class="text-3xl font-semibold">Finance Analyst Portfolio & Insights</h1>
-    <p class="text-sm text-gray-600 mt-2">
-      Forecasting • Variance • Quarterly Reporting • Tableau • SQL • PowerPoint
+    <h1 class="text-3xl md:text-4xl font-semibold leading-tight">Data Analyst Portfolio and Insights</h1>
+    <p class="text-sm md:text-base text-gray-600 mt-3 max-w-4xl">
+      Data analyst with 5+ years' experience delivering impactful analytics in cybersecurity, energy, retail, and financial services.
+      Skilled in Python, SQL, Tableau, Power BI, Excel, and Snowflake — turning messy data into decision-ready dashboards and insights.
     </p>
+    <div class="flex flex-wrap gap-3 mt-5">
+      <span class="px-4 py-2 rounded-full bg-white border text-sm">Excel</span>
+      <span class="px-4 py-2 rounded-full bg-white border text-sm">SQL</span>
+      <span class="px-4 py-2 rounded-full bg-white border text-sm">Python</span>
+      <span class="px-4 py-2 rounded-full bg-white border text-sm">Power BI</span>
+      <span class="px-4 py-2 rounded-full bg-white border text-sm">Tableau</span>
+      <span class="px-4 py-2 rounded-full bg-white border text-sm">Snowflake</span>
+    </div>
   </header>
 
-  <!-- Skills & Tooling -->
+  <!-- Skills & Tooling (with emojis) -->
   <section id="skills" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-3">Skills &amp; Tooling</h2>
-    <div class="grid md:grid-cols-3 gap-4">
+    <h2 class="text-lg font-semibold mb-4">Skills & Tooling</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="card p-5">
-        <h3 class="font-semibold mb-2">📊 Modeling</h3>
-        <ul class="list-disc ml-5 text-sm">
-          <li>Forecasting &amp; Variance Analysis</li>
-          <li>Quarterly KPI Reporting</li>
-          <li>Scenario Modeling</li>
-        </ul>
+        <div class="text-3xl mb-2">💰</div>
+        <h3 class="font-semibold mb-2">Financial Data Analysis</h3>
+        <p class="text-sm text-gray-600">
+          Forecasting, variance analysis, and cost-to-revenue modeling with SQL and Excel for clean, auditable insights.
+        </p>
       </div>
       <div class="card p-5">
-        <h3 class="font-semibold mb-2">📈 Visualization</h3>
-        <ul class="list-disc ml-5 text-sm">
-          <li>Tableau Dashboards</li>
-          <li>Executive PPT Decks</li>
-          <li>Excel Reports</li>
-        </ul>
+        <div class="text-3xl mb-2">📊</div>
+        <h3 class="font-semibold mb-2">Visualization & Reporting</h3>
+        <p class="text-sm text-gray-600">
+          Tableau dashboards and executive-ready PowerPoint reports highlighting KPIs, trends, and profitability.
+        </p>
       </div>
       <div class="card p-5">
-        <h3 class="font-semibold mb-2">🗄️ SQL</h3>
-        <ul class="list-disc ml-5 text-sm">
-          <li>Data Extraction</li>
-          <li>Joins &amp; Aggregates</li>
-          <li>Window Functions</li>
-        </ul>
+        <div class="text-3xl mb-2">📈</div>
+        <h3 class="font-semibold mb-2">Scenario & KPI Tracking</h3>
+        <p class="text-sm text-gray-600">
+          Margin tracking, quarterly variance, and scenario modeling to support planning and decision-making.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Featured Projects -->
   <section id="projects" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-3">Featured Projects</h2>
-    <div class="grid md:grid-cols-2 gap-4">
-      <!-- Finance Analyst Dashboard project card -->
-      <article class="card p-5">
-        <div class="text-xs text-gray-500 mb-1">2025</div>
-        <h3 class="text-xl font-semibold">Finance Analyst Dashboard (Tableau)</h3>
-        <p class="text-sm text-gray-700 mt-2">
-          <strong>What it shows:</strong> KPI tiles for Profit, Margin %, and Costs; Cost-to-Revenue Ratio (CRR); Growth summary; Profit by Year and by Country;
-          Total Cost and Margin Profit per Quarter.
-          <strong> Finance skills used:</strong> forecasting, variance analysis, KPI design, executive reporting, and data storytelling with drill-downs and parameter controls.
-        </p>
-        <div class="mt-3">
-          <a href="#dashboards" class="underline text-sm">Jump to Live Dashboard ↑</a>
-        </div>
-      </article>
+    <h2 class="text-lg font-semibold mb-4">Featured Projects</h2>
 
-      <!-- Case Study -->
-      <article class="card p-5">
-        <div class="text-xs text-gray-500 mb-1">2025</div>
-        <h3 class="text-xl font-semibold">Case Study: Contact Center KPI Dashboard</h3>
-        <p class="text-sm text-gray-700 mt-2">
-          SLA, AHT, CSAT, and productivity metrics with agent &amp; queue drill-through; management brief slides.
-          <strong> Finance focus:</strong> staffing efficiency, variance vs. service goals, and risk watchlist by SLA.
-        </p>
-        <ul class="list-disc ml-5 text-sm leading-6 mt-2">
-          <li>Reusable KPI model &amp; measures</li>
-          <li>Agent-level drilldowns for targeted coaching</li>
-          <li>SLA watchlist &amp; risk indicators for staffing decisions</li>
-        </ul>
-      </article>
-    </div>
+    <!-- Finance Analyst Dashboard project card -->
+    <article class="card p-6">
+      <div class="text-xs text-gray-500 mb-1">2025</div>
+      <h3 class="text-xl font-semibold">Finance Analyst Dashboard (Tableau)</h3>
+      <p class="text-sm text-gray-600 mt-2">
+        <strong>What it shows:</strong> KPI tiles for Profit, Margin %, and Costs; Cost-to-Revenue Ratio (CRR); Growth summary; Profit by Year and by Country;
+        Total Cost and Margin Profit per Quarter. <strong>Finance skills used:</strong> forecasting, variance analysis, KPI design, executive reporting, and data storytelling with drill-downs and parameter controls.
+      </p>
+      <div class="mt-4">
+        <a href="#dashboards" class="underline text-sm">Jump to Live Dashboard ↟</a>
+      </div>
+    </article>
   </section>
 
-  <!-- Tableau Showcase -->
+  <!-- Tableau Showcase (iframe embed) -->
   <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-3">Tableau Showcase</h2>
+    <h2 class="text-lg font-semibold mb-2">Tableau Showcase</h2>
     <p class="text-sm text-gray-600 mb-3">
-      This dashboard showcases key financial performance insights including KPIs for Profit, Margin %, Cost-to-Revenue Ratio (CRR),
-      Growth summary, and Profit by Year and Country. It highlights cost and margin trends per quarter and demonstrates skills in
-      forecasting, variance analysis, KPI design, and executive-ready data visualization.
+      This dashboard showcases key financial performance insights including KPIs for Profit, Margin %, Cost-to-Revenue Ratio (CRR), growth summary,
+      and Profit by Year and Country. It highlights cost and margin trends per quarter and demonstrates skills in forecasting, variance analysis,
+      KPI design, and executive-ready data visualization.
     </p>
+
     <div class="card p-3">
       <div class="aspect-[16/9] w-full">
         <iframe
@@ -127,38 +117,40 @@
   <!-- SQL Snippets -->
   <section id="sql" class="max-w-6xl mx-auto px-4 pt-10 pb-12">
     <h2 class="text-lg font-semibold mb-3">SQL Snippets</h2>
-    <div class="card p-5">
-<pre class="bg-gray-50 p-3 rounded-lg text-xs border">WITH m AS (
-  SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter], Revenue, COGS, OpEx
+    <div class="card p-5 overflow-x-auto">
+<pre class="bg-gray-50 p-3 rounded-lg text-xs border leading-5">
+WITH m AS (
+  SELECT YEAR([Date]) AS [Year],
+         DATEPART(QUARTER, [Date]) AS [Quarter],
+         Revenue, COGS, OpEx
   FROM dbo.Finance
 )
-SELECT [Year], [Quarter], SUM(Revenue) AS Revenue,
+SELECT [Year], [Quarter],
+       SUM(Revenue) AS Revenue,
        SUM(Revenue-COGS-OpEx) AS NetIncome
 FROM m
 GROUP BY [Year], [Quarter]
-ORDER BY [Year], [Quarter];</pre>
+ORDER BY [Year], [Quarter];
+</pre>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 pt-2 pb-12">
-    <h2 class="text-lg font-semibold mb-3">Contact &amp; Links</h2>
-    <div class="card p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <div>
-        <p class="text-sm">Get in touch:</p>
-        <p class="text-sm mt-1">
-          <a href="mailto:chelsiewilliamscw3@gmail.com" class="underline">chelsiewilliamscw3@gmail.com</a>
-        </p>
-      </div>
-      <div class="flex gap-5">
-        <a class="underline text-sm" href="https://github.com/chelsiewilliamscw3-sketch" target="_blank" rel="noopener">GitHub</a>
-        <a class="underline text-sm" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" rel="noopener">LinkedIn</a>
+  <section id="contact" class="max-w-6xl mx-auto px-4 pb-16">
+    <h2 class="text-lg font-semibold mb-3">Contact & Links</h2>
+    <div class="card p-5">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <div class="text-sm text-gray-600">Get in touch</div>
+          <a class="block text-sm underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a>
+          <a class="block text-sm underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="text-sm text-gray-500">
+          © 2025 Chelsie Williams — Finance Analyst Portfolio.
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-gray-500">
-    © 2025 Chelsie Williams — Finance Analyst Portfolio.
-  </footer>
 </body>
 </html>
