@@ -1,51 +1,80 @@
-<section id="dashboards" class="max-w-6xl mx-auto px-4 pt-10">
-  <h2 class="text-2xl font-semibold mb-2">Tableau Showcase</h2>
-  <p class="text-sm text-gray-600 mb-4">
-    This dashboard showcases key financial performance insights including KPIs for Profit, Margin %, 
-    Cost-to-Revenue Ratio (CRR), Growth summary, and Profit by Year and Country. It highlights 
-    cost and margin trends per quarter and demonstrates skills in forecasting, variance analysis, KPI design, 
-    and executive-ready data visualization.
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chelsie Williams — Finance Analyst Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
 
-  <div class="bg-white rounded-2xl border shadow-sm p-3">
-    <div class="relative w-full" style="padding-bottom:62%; height:0; overflow:hidden; border-radius:12px;">
-      <div class='tableauPlaceholder absolute inset-0' id='vizFinanceCW' style='width:100%; height:100%;'>
-        <noscript>
-          <a href='#'>
-            <img alt=' '
-                 src='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1_rss.png'
-                 style='border:none;' />
-          </a>
-        </noscript>
-        <object class='tableauViz' style='display:none; width:100%; height:100%;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-          <param name='embed_code_version' value='3' />
-          <param name='site_root' value='' />
-          <param name='name' value='FinancialAnalystDashboard/FinancialDashboard' />
-          <param name='tabs' value='yes' />
-          <param name='toolbar' value='yes' />
-          <param name='static_image' value='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1.png' />
-          <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
-          <param name='language' value='en-US' />
-        </object>
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto px-4 pt-10">
+    <h1 class="text-3xl font-bold">Finance Analyst Portfolio & Insights</h1>
+    <p class="text-sm text-gray-600 mt-2">
+      Showcasing dashboards, SQL reports, and financial analysis projects — turning data into insights.
+    </p>
+  </header>
+
+  <!-- Tableau Showcase -->
+  <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-2xl font-semibold mb-2">Tableau Showcase</h2>
+    <p class="text-sm text-gray-600 mb-4">
+      This dashboard showcases key financial performance insights including KPIs for Profit, Margin %,
+      Cost-to-Revenue Ratio (CRR), Growth summary, and Profit by Year and Country. It highlights cost
+      and margin trends per quarter and demonstrates skills in forecasting, variance analysis, KPI design,
+      and executive-ready data visualization.
+    </p>
+
+    <div class="bg-white rounded-2xl border shadow-sm p-3">
+      <div class="relative w-full" style="padding-bottom:62%; height:0; overflow:hidden; border-radius:12px;">
+        <div class="tableauPlaceholder absolute inset-0" id="vizFinanceCW" style="width:100%; height:100%;">
+          <noscript>
+            <a href="#">
+              <img alt="Finance Dashboard"
+                   src="https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1_rss.png"
+                   style="border:none;" />
+            </a>
+          </noscript>
+          <object class="tableauViz" style="display:none; width:100%; height:100%;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+            <param name="embed_code_version" value="3"/>
+            <param name="site_root" value=""/>
+            <param name="name" value="FinancialAnalystDashboard/FinancialDashboard"/>
+            <param name="tabs" value="yes"/>
+            <param name="toolbar" value="yes"/>
+            <param name="static_image" value="https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1.png"/>
+            <param name="animate_transition" value="yes"/>
+            <param name="display_static_image" value="yes"/>
+            <param name="display_spinner" value="yes"/>
+            <param name="display_overlay" value="yes"/>
+            <param name="display_count" value="yes"/>
+            <param name="language" value="en-US"/>
+          </object>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script type='text/javascript'>
-  (function () {
-    var divElement = document.getElementById('vizFinanceCW');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    vizElement.style.width = '100%';
-    vizElement.style.height = '100%';
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 pt-10 pb-12">
+    <h2 class="text-2xl font-semibold mb-2">Contact</h2>
+    <p>Email: <a href="mailto:chelsiewilliamscw3@gmail.com" class="text-blue-600 underline">chelsiewilliamscw3@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" class="text-blue-600 underline">Chelsie Williams</a></p>
+  </section>
 
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  })();
-</script>
+  <!-- Tableau Script -->
+  <script>
+    (function () {
+      var divElement = document.getElementById('vizFinanceCW');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      vizElement.style.width = '100%';
+      vizElement.style.height = '100%';
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    })();
+  </script>
+
+</body>
+</html>
