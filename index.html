@@ -1,138 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chelsie Williams — Finance Analyst Portfolio</title>
-
-  <!-- Tailwind for styling -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    html { scroll-behavior: smooth; }
-    .card { border-radius: 1rem; background: white; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-    .chip { display:inline-block; padding:.15rem .5rem; border:1px solid #e5e7eb; border-radius:9999px; font-size:.75rem; color:#374151; background:#fff; }
-  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar -->
-  <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">CW</div>
-        <span class="font-medium">Chelsie Williams</span>
-      </div>
-      <div class="flex gap-5 text-sm">
-        <a href="#dashboards" class="hover:underline">Dashboard</a>
-        <a href="#projects" class="hover:underline">Projects</a>
-        <a href="#sql" class="hover:underline">SQL</a>
-        <a href="#contact" class="hover:underline">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="max-w-6xl mx-auto px-4 pt-10">
-    <h1 class="text-3xl font-semibold">Finance Analyst Portfolio & Insights</h1>
-    <p class="text-sm text-gray-600 mt-2">Forecasting • Variance • Reporting • Tableau • SQL</p>
+  <!-- Hero Section -->
+  <header class="max-w-6xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold">Finance Analyst Portfolio & Insights</h1>
+    <p class="mt-2 text-gray-600">Forecasting • Variance • Tableau • SQL • Financial KPI Reporting</p>
   </header>
 
-  <!-- LIVE FINANCIAL ANALYTICS DASHBOARD -->
-  <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-3">Finance Analyst Dashboard (Live)</h2>
-    <div class="card p-3">
-      <div class="w-full overflow-hidden" style="height: 820px;">
+  <!-- Skills & Tooling -->
+  <section class="max-w-6xl mx-auto px-4 pt-6">
+    <h2 class="text-xl font-semibold mb-4">Skills & Tooling</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="bg-white p-5 rounded-xl border shadow-sm">
+        <h3 class="font-semibold mb-2">Data & Modeling</h3>
+        <ul class="list-disc ml-5 text-sm">
+          <li>Variance & Forecasting Models</li>
+          <li>Quarterly KPI & Ratio Analysis</li>
+          <li>Scenario Planning</li>
+        </ul>
+      </div>
+      <div class="bg-white p-5 rounded-xl border shadow-sm">
+        <h3 class="font-semibold mb-2">Visualization & Reporting</h3>
+        <ul class="list-disc ml-5 text-sm">
+          <li>Interactive Tableau Dashboards</li>
+          <li>Executive KPI Reports</li>
+          <li>Excel Variance Bridges</li>
+        </ul>
+      </div>
+      <div class="bg-white p-5 rounded-xl border shadow-sm">
+        <h3 class="font-semibold mb-2">Scenario & KPI Analysis</h3>
+        <ul class="list-disc ml-5 text-sm">
+          <li>Cost-to-Revenue Ratios (CRR)</li>
+          <li>Profitability Analysis</li>
+          <li>Quarter-over-Quarter Variances</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-xl font-semibold mb-4">Featured Projects</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="bg-white p-5 rounded-xl border shadow-sm">
+        <h3 class="font-semibold">Variance Reporting (Excel + SQL)</h3>
+        <p class="text-sm text-gray-600 mt-2">Quarterly expense & revenue variance analysis with visual variance bridges and executive-ready deliverables.</p>
+        <ul class="list-disc ml-5 mt-2 text-sm">
+          <li>Automated variance roll-ups</li>
+          <li>Scenario toggles</li>
+          <li>Quarter-close deliverables</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border shadow-sm">
+        <h3 class="font-semibold">Financial Forecasting Model</h3>
+        <p class="text-sm text-gray-600 mt-2">Driver-based revenue & cost model built in Excel and SQL, used to guide budget and long-term planning.</p>
+        <ul class="list-disc ml-5 mt-2 text-sm">
+          <li>3-statement roll-up forecasting</li>
+          <li>Sensitivity testing</li>
+          <li>Executive presentation decks</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border shadow-sm">
+        <h3 class="font-semibold">Profitability KPI Dashboard (Tableau)</h3>
+        <p class="text-sm text-gray-600 mt-2">Interactive Tableau dashboard showing CRR, margin % trends, and cost drivers across business units.</p>
+        <ul class="list-disc ml-5 mt-2 text-sm">
+          <li>Drill-downs by region/country</li>
+          <li>Quarter-over-quarter margins</li>
+          <li>Dynamic KPI filters</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tableau Showcase -->
+  <section class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-xl font-semibold mb-4">Tableau Showcase</h2>
+    <div class="bg-white p-3 rounded-xl border shadow-sm">
+      <div class="aspect-video w-full">
         <iframe
-          title="Finance Analyst Dashboard"
-          class="w-full rounded-xl border"
-          src="https://public.tableau.com/views/FinancialAnalystDashboard/FinancialDashboard?:showVizHome=no&:embed=true"
-          style="width: 100%; height: 860px; border: none; margin-bottom: -48px;"
-          allowfullscreen
-          loading="lazy">
+          src="https://public.tableau.com/views/MyFinanceDashboard/Sheet1?:showVizHome=no&:embed=true"
+          class="w-full h-full rounded-lg border"
+          allowfullscreen>
         </iframe>
       </div>
-      <!-- 🔽 Paragraph Description -->
-      <div class="mt-4 text-sm text-gray-700">
-        <p>
-          This live Finance Analyst Dashboard showcases a comprehensive variance analysis across 
-          <strong>Revenue, Profit, Margin %, and Costs</strong>. It provides visibility into 
-          <strong>Cost-to-Revenue Ratios (CRR)</strong>, year-over-year performance, and 
-          regional profitability by country. Quarterly variance trends highlight how expenses 
-          and margins shift over time, giving executives actionable insights for decision-making.
-        </p>
-        <p class="mt-3">
-          <strong>Key skills demonstrated:</strong> financial modeling, variance analysis, 
-          KPI design, Tableau dashboard development, and executive-level reporting with 
-          clear data storytelling.
-        </p>
-      </div>
     </div>
   </section>
 
-  <!-- Featured Projects (Finance description only) -->
-  <section id="projects" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-3">Featured Projects</h2>
-    <div class="grid md:grid-cols-1 gap-6">
-
-      <!-- Finance Analyst Dashboard description card -->
-      <article class="card p-6">
-        <div class="text-xs text-gray-500 mb-1">2025</div>
-        <h3 class="text-xl font-semibold">Finance Analyst Dashboard (Tableau)</h3>
-        <p class="text-sm text-gray-600 mt-2">
-          <strong>What it shows:</strong> KPI tiles for Profit, Margin %, and Costs;
-          Cost-to-Revenue Ratio (CRR); Growth summary; Profit by Year and by Country;
-          Total Cost and Margin Profit per Quarter.
-          <strong>Finance skills used:</strong> forecasting, variance analysis, KPI design,
-          executive reporting, and data storytelling with drill-downs and parameter controls.
-        </p>
-        <div class="mt-4">
-          <a href="#dashboards" class="underline text-sm">Jump to Live Dashboard ↑</a>
-        </div>
-      </article>
-
+  <!-- Case Study -->
+  <section class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-xl font-semibold mb-4">Case Study: Financial KPI Dashboard</h2>
+    <div class="bg-white p-5 rounded-xl border shadow-sm">
+      <p class="text-sm text-gray-600">Designed a KPI dashboard to track quarterly Profit, CRR, and Margin % variances. Used Tableau for visualization, SQL for data prep, and Excel for validation.</p>
+      <ul class="list-disc ml-5 mt-2 text-sm">
+        <li>Interactive variance reporting with filters</li>
+        <li>Quarter-over-quarter comparisons</li>
+        <li>Executive-ready storyboards</li>
+      </ul>
     </div>
   </section>
 
-  <!-- SQL Snippets (kept separate) -->
-  <section id="sql" class="max-w-6xl mx-auto px-4 pt-10 pb-16">
-    <h2 class="text-lg font-semibold mb-3">SQL Snippets</h2>
-    <div class="card p-5">
-<pre class="bg-gray-50 p-3 rounded-lg text-xs border overflow-x-auto">WITH m AS (
+  <!-- Python Project -->
+  <section class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-xl font-semibold mb-4">Python Project — Customer Segmentation</h2>
+    <div class="bg-white p-5 rounded-xl border shadow-sm">
+      <p class="text-sm text-gray-600">Built a segmentation model for financial customers using Python (pandas, scikit-learn). Focused on identifying profitability tiers and forecasting churn risk.</p>
+      <ul class="list-disc ml-5 mt-2 text-sm">
+        <li>RFM modeling</li>
+        <li>K-Means clustering</li>
+        <li>Profitability cohort analysis</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SQL Snippets -->
+  <section class="max-w-6xl mx-auto px-4 pt-10">
+    <h2 class="text-xl font-semibold mb-4">SQL Snippets</h2>
+    <div class="bg-white p-5 rounded-xl border shadow-sm">
+      <pre class="bg-gray-50 p-3 rounded-lg text-xs border">
+WITH m AS (
   SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter],
          Revenue, COGS, OpEx
   FROM dbo.Finance
 )
-SELECT [Year], [Quarter],
-       SUM(Revenue) AS Revenue,
+SELECT [Year], [Quarter], SUM(Revenue) AS Revenue,
        SUM(Revenue-COGS-OpEx) AS NetIncome
 FROM m
 GROUP BY [Year], [Quarter]
-ORDER BY [Year], [Quarter];</pre>
+ORDER BY [Year], [Quarter];
+      </pre>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 pt-10 pb-16">
-    <h2 class="text-lg font-semibold mb-3">Contact</h2>
-    <div class="card p-5">
-      <p class="text-sm text-gray-600 mb-2">
-        Feel free to reach out for collaborations, opportunities, or to learn more about my work.
-      </p>
-      <ul class="text-sm">
-        <li>
-          <strong>Email:</strong>
-          <a href="mailto:chelsiewilliamscw3@gmail.com" class="underline text-blue-600">
-            chelsiewilliamscw3@gmail.com
-          </a>
-        </li>
-        <li>
-          <strong>LinkedIn:</strong>
-          <a href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" class="underline text-blue-600">
-            www.linkedin.com/in/chelsie-williams-31a934166
-          </a>
-        </li>
-      </ul>
+  <!-- Contact Info -->
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-xl font-semibold mb-4">Contact & Links</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-5 rounded-xl border shadow-sm">
+        <h3 class="font-semibold">Get in Touch</h3>
+        <p class="text-sm mt-2">Email: <a href="mailto:chelsiewilliamscw3@gmail.com" class="underline">chelsiewilliamscw3@gmail.com</a></p>
+        <p class="text-sm mt-2">LinkedIn: <a href="https://www.linkedin.com/in/chelsie-williams-31a934166" class="underline">Chelsie Williams</a></p>
+      </div>
     </div>
   </section>
 
