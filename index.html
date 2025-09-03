@@ -8,23 +8,6 @@
   <style>
     html { scroll-behavior: smooth; }
     .card { border-radius: 1rem; background: white; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-
-    /* Hide Tableau footers, "View on Tableau", Share, and Download buttons */
-    .tableauPlaceholder iframe { border: none !important; }
-    .tableauPlaceholder [title="View on Tableau Public"],
-    .tableauPlaceholder .tab-iframe,
-    .tableauPlaceholder .footer,
-    .tableauPlaceholder .vizFooter,
-    .tableauPlaceholder .toolbar,
-    .tableauPlaceholder .tab-toolbar,
-    .tableauPlaceholder .share,
-    .tableauPlaceholder .download,
-    .tableauPlaceholder .tabControls {
-      display: none !important;
-      visibility: hidden !important;
-      height: 0 !important;
-      overflow: hidden !important;
-    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -48,6 +31,7 @@
 
   <!-- Hero with Contact Info -->
   <header class="max-w-6xl mx-auto px-4 pt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- Left Side -->
     <div>
       <h1 class="text-3xl md:text-4xl font-semibold leading-tight">Data Analyst Portfolio and Insights</h1>
       <p class="text-sm md:text-base text-gray-600 mt-3 max-w-3xl">
@@ -62,7 +46,7 @@
       </div>
     </div>
 
-    <!-- Profile Card -->
+    <!-- Right Side Contact Card -->
     <div class="card p-6">
       <h3 class="font-medium text-gray-700 mb-2">Profile</h3>
       <div class="text-sm mb-1"><span class="text-gray-500">Name</span>: Chelsie Williams</div>
@@ -80,11 +64,39 @@
     </div>
   </header>
 
-  <!-- Dashboards -->
-  <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-12">
-    <h2 class="text-lg font-semibold mb-4">Tableau Dashboards</h2>
+  <!-- Skills & Tooling (with emojis) -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 pt-12">
+    <h2 class="text-lg font-semibold mb-4">Skills & Tooling</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card p-5">
+        <div class="text-3xl mb-2">💰</div>
+        <h3 class="font-semibold mb-2">Financial Data Analysis</h3>
+        <p class="text-sm text-gray-600">
+          Forecasting, variance analysis, and cost-to-revenue modeling with SQL and Excel for clean, auditable insights.
+        </p>
+      </div>
+      <div class="card p-5">
+        <div class="text-3xl mb-2">📊</div>
+        <h3 class="font-semibold mb-2">Visualization & Reporting</h3>
+        <p class="text-sm text-gray-600">
+          Tableau dashboards and executive-ready PowerPoint reports highlighting KPIs, trends, and profitability.
+        </p>
+      </div>
+      <div class="card p-5">
+        <div class="text-3xl mb-2">📈</div>
+        <h3 class="font-semibold mb-2">Scenario & KPI Tracking</h3>
+        <p class="text-sm text-gray-600">
+          Margin tracking, quarterly variance, and scenario modeling to support planning and decision-making.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Financial Analyst Dashboard -->
+  <!-- Dashboards Section -->
+  <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-12">
+    <h2 class="text-lg font-semibold mb-4">Tableau Showcase</h2>
+
+    <!-- Financial Analyst Dashboard (Cleaned) -->
     <div class="card p-5 mb-8">
       <h3 class="font-semibold mb-2">Financial Analyst Dashboard</h3>
       <div class="tableauPlaceholder" id="vizFinancial">
@@ -93,7 +105,7 @@
           <param name="embed_code_version" value="3" /> 
           <param name="name" value="FinancialAnalystDashboard/FinancialDashboard" />
           <param name="tabs" value="no" />
-          <param name="toolbar" value="no" /> <!-- toolbar hidden -->
+          <param name="toolbar" value="no" /> <!-- Hides toolbar/share/download -->
           <param name="display_count" value="no" />
         </object>
       </div>
@@ -107,23 +119,23 @@
       </script>
     </div>
 
-    <!-- ATM Cash Flow Dashboard -->
+    <!-- ATM Cashflow Dashboard -->
     <div class="card p-5">
-      <h3 class="font-semibold mb-2">ATM Cash Flow Dashboard</h3>
+      <h3 class="font-semibold mb-2">ATM Cashflow Analysis</h3>
       <div class="tableauPlaceholder" id="vizATM">
         <object class="tableauViz">
           <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> 
           <param name="embed_code_version" value="3" /> 
           <param name="name" value="ATMcashflowanalysis/ATMTransactionalAnalysis" />
           <param name="tabs" value="no" />
-          <param name="toolbar" value="no" /> <!-- toolbar hidden -->
+          <param name="toolbar" value="no" /> <!-- already cleaned -->
           <param name="display_count" value="no" />
         </object>
       </div>
       <script type="text/javascript"> 
         var divElement = document.getElementById('vizATM'); 
         var vizElement = divElement.getElementsByTagName('object')[0]; 
-        vizElement.style.width='100%';vizElement.style.height='1000px'; 
+        vizElement.style.width='100%';vizElement.style.height='800px'; 
         var scriptElement = document.createElement('script'); 
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
         vizElement.parentNode.insertBefore(scriptElement, vizElement); 
@@ -135,7 +147,8 @@
   <section id="sql" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">SQL Snippets</h2>
     <div class="card p-5">
-      <pre class="bg-gray-50 p-4 rounded-lg border text-xs md:text-sm leading-6 overflow-x-auto"><code>WITH m AS (
+      <pre class="bg-gray-50 p-3 rounded text-sm overflow-x-auto">
+WITH m AS (
   SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter],
          Revenue, COGS, OpEx
   FROM dbo.Finance
@@ -145,21 +158,18 @@ SELECT [Year], [Quarter],
        SUM(Revenue-COGS-OpEx) AS NetIncome
 FROM m
 GROUP BY [Year], [Quarter]
-ORDER BY [Year], [Quarter];</code></pre>
+ORDER BY [Year], [Quarter];
+      </pre>
     </div>
   </section>
 
-  <!-- Contact & Links -->
+  <!-- Contact -->
   <section id="contact" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">Contact & Links</h2>
     <div class="card p-5">
-      <p class="text-sm text-gray-600 mb-3">Get in touch</p>
-      <p class="mb-2">
-        <a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a>
-      </p>
-      <p>
-        <a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">LinkedIn</a>
-      </p>
+      <p class="text-sm mb-2">Get in touch</p>
+      <p><a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a></p>
+      <p><a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">LinkedIn</a></p>
     </div>
   </section>
 
