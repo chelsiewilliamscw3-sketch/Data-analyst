@@ -1,158 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chelsie Williams — Finance Analyst Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800">
+<section id="dashboards" class="max-w-6xl mx-auto px-4 pt-10">
+  <h2 class="text-2xl font-semibold mb-2">Tableau Showcase</h2>
+  <p class="text-sm text-gray-600 mb-4">
+    This dashboard showcases key financial performance insights including KPIs for Profit, Margin %, 
+    Cost-to-Revenue Ratio (CRR), Growth summary, and Profit by Year and Country. It highlights 
+    cost and margin trends per quarter and demonstrates skills in forecasting, variance analysis, KPI design, 
+    and executive-ready data visualization.
+  </p>
 
-  <!-- Hero Section -->
-  <header class="max-w-6xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-bold">Finance Analyst Portfolio & Insights</h1>
-    <p class="mt-2 text-gray-600">Forecasting • Variance • Tableau • SQL • Financial KPI Reporting</p>
-  </header>
-
-  <!-- Skills & Tooling -->
-  <section class="max-w-6xl mx-auto px-4 pt-6">
-    <h2 class="text-xl font-semibold mb-4">Skills & Tooling</h2>
-    <div class="grid md:grid-cols-3 gap-4">
-      <div class="bg-white p-5 rounded-xl border shadow-sm">
-        <h3 class="font-semibold mb-2">Data & Modeling</h3>
-        <ul class="list-disc ml-5 text-sm">
-          <li>Variance & Forecasting Models</li>
-          <li>Quarterly KPI & Ratio Analysis</li>
-          <li>Scenario Planning</li>
-        </ul>
-      </div>
-      <div class="bg-white p-5 rounded-xl border shadow-sm">
-        <h3 class="font-semibold mb-2">Visualization & Reporting</h3>
-        <ul class="list-disc ml-5 text-sm">
-          <li>Interactive Tableau Dashboards</li>
-          <li>Executive KPI Reports</li>
-          <li>Excel Variance Bridges</li>
-        </ul>
-      </div>
-      <div class="bg-white p-5 rounded-xl border shadow-sm">
-        <h3 class="font-semibold mb-2">Scenario & KPI Analysis</h3>
-        <ul class="list-disc ml-5 text-sm">
-          <li>Cost-to-Revenue Ratios (CRR)</li>
-          <li>Profitability Analysis</li>
-          <li>Quarter-over-Quarter Variances</li>
-        </ul>
+  <div class="bg-white rounded-2xl border shadow-sm p-3">
+    <div class="relative w-full" style="padding-bottom:62%; height:0; overflow:hidden; border-radius:12px;">
+      <div class='tableauPlaceholder absolute inset-0' id='vizFinanceCW' style='width:100%; height:100%;'>
+        <noscript>
+          <a href='#'>
+            <img alt=' '
+                 src='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1_rss.png'
+                 style='border:none;' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none; width:100%; height:100%;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='FinancialAnalystDashboard/FinancialDashboard' />
+          <param name='tabs' value='yes' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Featured Projects -->
-  <section class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-xl font-semibold mb-4">Featured Projects</h2>
-    <div class="grid md:grid-cols-3 gap-6">
+<script type='text/javascript'>
+  (function () {
+    var divElement = document.getElementById('vizFinanceCW');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = '100%';
 
-      <div class="bg-white p-5 rounded-xl border shadow-sm">
-        <h3 class="font-semibold">Variance Reporting (Excel + SQL)</h3>
-        <p class="text-sm text-gray-600 mt-2">Quarterly expense & revenue variance analysis with visual variance bridges and executive-ready deliverables.</p>
-        <ul class="list-disc ml-5 mt-2 text-sm">
-          <li>Automated variance roll-ups</li>
-          <li>Scenario toggles</li>
-          <li>Quarter-close deliverables</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-5 rounded-xl border shadow-sm">
-        <h3 class="font-semibold">Financial Forecasting Model</h3>
-        <p class="text-sm text-gray-600 mt-2">Driver-based revenue & cost model built in Excel and SQL, used to guide budget and long-term planning.</p>
-        <ul class="list-disc ml-5 mt-2 text-sm">
-          <li>3-statement roll-up forecasting</li>
-          <li>Sensitivity testing</li>
-          <li>Executive presentation decks</li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-5 rounded-xl border shadow-sm">
-        <h3 class="font-semibold">Profitability KPI Dashboard (Tableau)</h3>
-        <p class="text-sm text-gray-600 mt-2">Interactive Tableau dashboard showing CRR, margin % trends, and cost drivers across business units.</p>
-        <ul class="list-disc ml-5 mt-2 text-sm">
-          <li>Drill-downs by region/country</li>
-          <li>Quarter-over-quarter margins</li>
-          <li>Dynamic KPI filters</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Tableau Showcase -->
-  <section class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-xl font-semibold mb-4">Tableau Showcase</h2>
-    <div class="bg-white p-3 rounded-xl border shadow-sm">
-      <div class="aspect-video w-full">
-        <iframe
-          src="https://public.tableau.com/views/MyFinanceDashboard/Sheet1?:showVizHome=no&:embed=true"
-          class="w-full h-full rounded-lg border"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Study -->
-  <section class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-xl font-semibold mb-4">Case Study: Financial KPI Dashboard</h2>
-    <div class="bg-white p-5 rounded-xl border shadow-sm">
-      <p class="text-sm text-gray-600">Designed a KPI dashboard to track quarterly Profit, CRR, and Margin % variances. Used Tableau for visualization, SQL for data prep, and Excel for validation.</p>
-      <ul class="list-disc ml-5 mt-2 text-sm">
-        <li>Interactive variance reporting with filters</li>
-        <li>Quarter-over-quarter comparisons</li>
-        <li>Executive-ready storyboards</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Python Project -->
-  <section class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-xl font-semibold mb-4">Python Project — Customer Segmentation</h2>
-    <div class="bg-white p-5 rounded-xl border shadow-sm">
-      <p class="text-sm text-gray-600">Built a segmentation model for financial customers using Python (pandas, scikit-learn). Focused on identifying profitability tiers and forecasting churn risk.</p>
-      <ul class="list-disc ml-5 mt-2 text-sm">
-        <li>RFM modeling</li>
-        <li>K-Means clustering</li>
-        <li>Profitability cohort analysis</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SQL Snippets -->
-  <section class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-xl font-semibold mb-4">SQL Snippets</h2>
-    <div class="bg-white p-5 rounded-xl border shadow-sm">
-      <pre class="bg-gray-50 p-3 rounded-lg text-xs border">
-WITH m AS (
-  SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter],
-         Revenue, COGS, OpEx
-  FROM dbo.Finance
-)
-SELECT [Year], [Quarter], SUM(Revenue) AS Revenue,
-       SUM(Revenue-COGS-OpEx) AS NetIncome
-FROM m
-GROUP BY [Year], [Quarter]
-ORDER BY [Year], [Quarter];
-      </pre>
-    </div>
-  </section>
-
-  <!-- Contact Info -->
-  <section class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-xl font-semibold mb-4">Contact & Links</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white p-5 rounded-xl border shadow-sm">
-        <h3 class="font-semibold">Get in Touch</h3>
-        <p class="text-sm mt-2">Email: <a href="mailto:chelsiewilliamscw3@gmail.com" class="underline">chelsiewilliamscw3@gmail.com</a></p>
-        <p class="text-sm mt-2">LinkedIn: <a href="https://www.linkedin.com/in/chelsie-williams-31a934166" class="underline">Chelsie Williams</a></p>
-      </div>
-    </div>
-  </section>
-
-</body>
-</html>
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  })();
+</script>
