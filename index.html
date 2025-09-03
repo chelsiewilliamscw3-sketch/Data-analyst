@@ -29,25 +29,38 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="max-w-6xl mx-auto px-4 pt-10">
-    <h1 class="text-3xl md:text-4xl font-semibold leading-tight">Data Analyst Portfolio and Insights</h1>
-    <p class="text-sm md:text-base text-gray-600 mt-3 max-w-4xl">
-      Data analyst with 5+ years' experience delivering impactful analytics in cybersecurity, energy, retail, and financial services.
-      Skilled in Python, SQL, Tableau, Power BI, Excel, and Snowflake — turning messy data into decision-ready dashboards and insights.
-    </p>
-    <div class="flex flex-wrap gap-3 mt-5">
-      <span class="px-4 py-2 rounded-full bg-white border text-sm">Excel</span>
-      <span class="px-4 py-2 rounded-full bg-white border text-sm">SQL</span>
-      <span class="px-4 py-2 rounded-full bg-white border text-sm">Python</span>
-      <span class="px-4 py-2 rounded-full bg-white border text-sm">Power BI</span>
-      <span class="px-4 py-2 rounded-full bg-white border text-sm">Tableau</span>
-      <span class="px-4 py-2 rounded-full bg-white border text-sm">Snowflake</span>
+  <!-- Hero with Contact Info -->
+  <header class="max-w-6xl mx-auto px-4 pt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- Left Side -->
+    <div>
+      <h1 class="text-3xl md:text-4xl font-semibold leading-tight">Data Analyst Portfolio and Insights</h1>
+      <p class="text-sm md:text-base text-gray-600 mt-3 max-w-3xl">
+        Finance-focused data analyst with 5+ years' experience delivering impactful insights in cybersecurity, energy, retail, and financial services.
+        Skilled in Excel, SQL, Tableau, Power BI, and Python — turning messy data into decision-ready dashboards and executive reports.
+      </p>
+      <div class="flex flex-wrap gap-3 mt-5">
+        <span class="px-4 py-2 rounded-full bg-white border text-sm">Excel</span>
+        <span class="px-4 py-2 rounded-full bg-white border text-sm">SQL</span>
+        <span class="px-4 py-2 rounded-full bg-white border text-sm">Tableau</span>
+        <span class="px-4 py-2 rounded-full bg-white border text-sm">Power BI</span>
+        <span class="px-4 py-2 rounded-full bg-white border text-sm">Python</span>
+      </div>
+    </div>
+
+    <!-- Right Side Contact Card -->
+    <div class="card p-6">
+      <h3 class="font-medium text-gray-700 mb-2">Profile</h3>
+      <div class="text-sm mb-1"><span class="text-gray-500">Name</span>: Chelsie Williams</div>
+      <div class="text-sm mb-1"><span class="text-gray-500">Location</span>: Houston, TX</div>
+      <div class="text-sm mb-1"><span class="text-gray-500">Email</span>: 
+        <a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a>
+      </div>
+      <div class="text-sm"><span class="text-gray-500">Phone</span>: (908) 425-2060</div>
     </div>
   </header>
 
   <!-- Skills & Tooling (with emojis) -->
-  <section id="skills" class="max-w-6xl mx-auto px-4 pt-10">
+  <section id="skills" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">Skills & Tooling</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="card p-5">
@@ -74,83 +87,7 @@
     </div>
   </section>
 
-  <!-- Featured Projects -->
-  <section id="projects" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-4">Featured Projects</h2>
-
-    <!-- Finance Analyst Dashboard project card -->
-    <article class="card p-6">
-      <div class="text-xs text-gray-500 mb-1">2025</div>
-      <h3 class="text-xl font-semibold">Finance Analyst Dashboard (Tableau)</h3>
-      <p class="text-sm text-gray-600 mt-2">
-        <strong>What it shows:</strong> KPI tiles for Profit, Margin %, and Costs; Cost-to-Revenue Ratio (CRR); Growth summary; Profit by Year and by Country;
-        Total Cost and Margin Profit per Quarter. <strong>Finance skills used:</strong> forecasting, variance analysis, KPI design, executive reporting, and data storytelling with drill-downs and parameter controls.
-      </p>
-      <div class="mt-4">
-        <a href="#dashboards" class="underline text-sm">Jump to Live Dashboard ↟</a>
-      </div>
-    </article>
-  </section>
-
-  <!-- Tableau Showcase (iframe embed) -->
-  <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-2">Tableau Showcase</h2>
-    <p class="text-sm text-gray-600 mb-3">
-      This dashboard showcases key financial performance insights including KPIs for Profit, Margin %, Cost-to-Revenue Ratio (CRR), growth summary,
-      and Profit by Year and Country. It highlights cost and margin trends per quarter and demonstrates skills in forecasting, variance analysis,
-      KPI design, and executive-ready data visualization.
-    </p>
-
-    <div class="card p-3">
-      <div class="aspect-[16/9] w-full">
-        <iframe
-          src="https://public.tableau.com/views/FinancialAnalystDashboard/FinancialDashboard?:showVizHome=no&:embed=true"
-          title="Finance Analyst Dashboard"
-          class="w-full h-full rounded-xl border"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- SQL Snippets -->
-  <section id="sql" class="max-w-6xl mx-auto px-4 pt-10 pb-12">
-    <h2 class="text-lg font-semibold mb-3">SQL Snippets</h2>
-    <div class="card p-5 overflow-x-auto">
-<pre class="bg-gray-50 p-3 rounded-lg text-xs border leading-5">
-WITH m AS (
-  SELECT YEAR([Date]) AS [Year],
-         DATEPART(QUARTER, [Date]) AS [Quarter],
-         Revenue, COGS, OpEx
-  FROM dbo.Finance
-)
-SELECT [Year], [Quarter],
-       SUM(Revenue) AS Revenue,
-       SUM(Revenue-COGS-OpEx) AS NetIncome
-FROM m
-GROUP BY [Year], [Quarter]
-ORDER BY [Year], [Quarter];
-</pre>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 pb-16">
-    <h2 class="text-lg font-semibold mb-3">Contact & Links</h2>
-    <div class="card p-5">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <div class="text-sm text-gray-600">Get in touch</div>
-          <a class="block text-sm underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a>
-          <a class="block text-sm underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-        <div class="text-sm text-gray-500">
-          © 2025 Chelsie Williams — Finance Analyst Portfolio.
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- (Rest of your sections: Projects, Tableau Showcase, SQL Snippets, Contact) -->
 
 </body>
 </html>
