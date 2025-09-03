@@ -1,128 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chelsie Williams — Finance Analyst Portfolio</title>
-
-  <!-- Tailwind (required for styling) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Small helper style for cards -->
-  <style>
-    html { scroll-behavior: smooth; }
-    .card { border-radius: 1rem; background: white; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-    .chip { display:inline-block; padding:.15rem .5rem; border:1px solid #e5e7eb; border-radius:9999px; font-size:.75rem; color:#374151; background:#fff; }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- Navbar -->
-  <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-full bg-gray-900 text-white flex items-center justify-center text-sm font-semibold">CW</div>
-        <span class="font-medium">Chelsie Williams</span>
-      </div>
-      <div class="flex gap-5 text-sm">
-        <a href="#dashboards" class="hover:underline">Dashboard</a>
-        <a href="#skills" class="hover:underline">Skills</a>
-        <a href="#projects" class="hover:underline">Projects</a>
-        <a href="#sql" class="hover:underline">SQL</a>
-        <a href="#contact" class="hover:underline">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- DASHBOARD FIRST -->
-  <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-3">Finance Analyst Dashboard</h2>
-    <div class="card p-3">
-      <div class="w-full overflow-hidden" style="height: 780px;">
-        <iframe
-          title="Finance Analyst Dashboard"
-          class="w-full rounded-xl border"
-          src="https://public.tableau.com/views/financialanalyst/Sheet1?:showVizHome=no&:embed=true"
-          style="width: 100%; height: 820px; border: none; margin-bottom: -48px;"
-          allowfullscreen loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="max-w-6xl mx-auto px-4 pt-10">
-    <h2 class="text-lg font-semibold mb-3">Skills & Tooling</h2>
-    <div class="grid md:grid-cols-3 gap-4">
-      <div class="card p-5">
-        <h3 class="font-semibold mb-2">Modeling</h3>
-        <ul class="list-disc ml-5 text-sm">
-          <li>Forecasting & Variance Analysis</li>
-          <li>Quarterly KPI Reporting</li>
-          <li>Scenario Modeling</li>
-        </ul>
-      </div>
-      <div class="card p-5">
-        <h3 class="font-semibold mb-2">Visualization</h3>
-        <ul class="list-disc ml-5 text-sm">
-          <li>Tableau Dashboards</li>
-          <li>Executive PPT Decks</li>
-          <li>Excel Reports</li>
-        </ul>
-      </div>
-      <div class="card p-5">
-        <h3 class="font-semibold mb-2">SQL</h3>
-        <ul class="list-disc ml-5 text-sm">
-          <li>Data Extraction</li>
-          <li>Joins & Aggregates</li>
-          <li>Window Functions</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
   <!-- Featured Projects -->
   <section id="projects" class="max-w-6xl mx-auto px-4 pt-10">
     <h2 class="text-lg font-semibold mb-3">Featured Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid md:grid-cols-1 gap-6">
 
       <!-- Finance Analyst Dashboard project card -->
       <article class="card p-6">
         <div class="text-xs text-gray-500 mb-1">2025</div>
         <h3 class="text-xl font-semibold">Finance Analyst Dashboard (Tableau)</h3>
         <p class="text-sm text-gray-600 mt-2">
-          KPI tiles for Profit, Margin %, and Costs; CRR table; Growth summary; Profit by Year & Country;
-          and quarterly cost/margin variance analysis.
+          <strong>What it shows:</strong> KPI tiles for Profit, Margin %, and Costs; 
+          Cost-to-Revenue Ratio (CRR); Growth summary; Profit by Year and by Country; 
+          Total Cost and Margin Profit per Quarter. 
+          <strong>Finance skills used:</strong> forecasting, variance analysis, KPI design, 
+          executive reporting, and data storytelling with drill-downs and parameter controls.
         </p>
-        <div class="mt-3 space-x-2">
-          <span class="chip">Tableau</span>
-          <span class="chip">Variance Analysis</span>
-          <span class="chip">KPI Design</span>
-        </div>
-        <ul class="list-disc ml-5 text-sm mt-3">
-          <li>Variance reporting with interactive dashboards</li>
-          <li>Cost-to-revenue ratio drill-downs</li>
-          <li>Executive-ready data storytelling</li>
-        </ul>
         <div class="mt-4">
-          <a href="#dashboards" class="underline text-sm">Jump to Dashboard ↑</a>
-        </div>
-      </article>
-
-      <!-- SQL Snippets project card -->
-      <article class="card p-6">
-        <div class="text-xs text-gray-500 mb-1">2025</div>
-        <h3 class="text-xl font-semibold">Quarterly Variance SQL Report</h3>
-        <p class="text-sm text-gray-600 mt-2">
-          SQL-based quarterly variance calculations used to support financial dashboards and executive reporting.
-        </p>
-        <div class="mt-3 space-x-2">
-          <span class="chip">SQL</span>
-          <span class="chip">CTEs</span>
-          <span class="chip">Finance Analytics</span>
-        </div>
-        <div class="mt-4">
-          <a href="#sql" class="underline text-sm">See SQL Snippets</a>
+          <a href="#dashboards" class="underline text-sm">Jump to Live Dashboard ↑</a>
         </div>
       </article>
 
@@ -144,20 +37,3 @@ GROUP BY [Year], [Quarter]
 ORDER BY [Year], [Quarter];</pre>
     </div>
   </section>
-
-  <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 pt-6 pb-16">
-    <h2 class="text-lg font-semibold mb-3">Contact</h2>
-    <div class="card p-5">
-      <p class="text-sm">
-        Email: <a href="mailto:chelsiewilliamscw3@gmail.com" class="underline">chelsiewilliamscw3@gmail.com</a><br/>
-        LinkedIn:
-        <a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" rel="noopener">
-          www.linkedin.com/in/chelsie-williams-31a934166
-        </a>
-      </p>
-    </div>
-  </section>
-
-</body>
-</html>
