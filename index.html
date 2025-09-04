@@ -166,7 +166,22 @@
     })();
   </script>
 </div>
-  <!-- ATM Cash Flow Dashboard (clean embed) -->
+ <!-- ATM Cash Flow Dashboard (clean embed) -->
+<!-- 1) CSS only for ATM viz: visually hides Tableau's footer area -->
+<style>
+  /* Mask the tiny footer area where Tableau injects "View on Tableau Public" */
+  #atmViz .vizFooterMask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 44px;            /* tweak if you ever see a 1–2px line */
+    background: #fff;        /* match page background */
+    pointer-events: none;    /* mask is visual only, doesn't block tooltips etc */
+    z-index: 5;
+  }
+</style>
+
 <div class="tableauPlaceholder" id="atmViz" style="position:relative">
   <noscript>
     <a href="#">
@@ -175,15 +190,21 @@
            style="border:none"/>
     </a>
   </noscript>
+
   <object class="tableauViz" style="display:none;">
     <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
     <param name="embed_code_version" value="3"/>
     <param name="site_root" value=""/>
     <param name="name" value="ATMcashflowanalysis/ATMTransactionalAnalysis"/>
+
+    <!-- Clean UI -->
     <param name="tabs" value="no"/>
     <param name="toolbar" value="no"/>
-    <!-- hide the 'View on Tableau Public' footer -->
+
+    <!-- Try to suppress the home/footer inside the iframe (Tableau hint) -->
     <param name="showVizHome" value="n"/>
+
+    <!-- Standard options -->
     <param name="static_image" value="https://public.tableau.com/static/images/AT/ATMcashflowanalysis/ATMTransactionalAnalysis/1.png"/>
     <param name="animate_transition" value="yes"/>
     <param name="display_static_image" value="yes"/>
@@ -192,12 +213,45 @@
     <param name="display_count" value="no"/>
     <param name="language" value="en-US"/>
   </object>
+
+  <!-- Visual mask to hide the footer link if Tableau still injects it -->
+  <div class="vizFooterMask" aria-hidden="true"></div>
 </div>
 
 <script>
   (function () {
     var div = document.getElementById('atmViz');
     var obj = div.getElementsByTagName('object')[0];
+
+    // Simple responsive sizing (keeps aspect nice)
+    function sizeViz() {
+      var w = div.offsetWidth;
+      if (w > 800) {
+        obj.style.minWidth = '1027px';
+        obj.style.maxWidth = '100%';
+        obj.style.minHeight = '900px';
+        obj.style.maxHeight = (w * 0.75) + 'px';
+      } else if (w > 500) {
+        obj.style.minWidth = '1027px';
+        obj.style.maxWidth = '100%';
+        obj.style.minHeight = '900px';
+        obj.style.maxHeight = (w * 0.75) + 'px';
+      } else {
+        obj.style.width = '100%';
+        obj.style.minHeight = '1500px';
+        obj.style.maxHeight = (w * 1.77) + 'px';
+      }
+    }
+
+    sizeViz();
+    window.addEventListener('resize', sizeViz);
+
+    // Load Tableau JS API
+    var s = document.createElement('script');
+    s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    obj.parentNode.insertBefore(s, obj);
+  })();
+</script>
 
     // Responsive sizing
     function sizeViz() {
