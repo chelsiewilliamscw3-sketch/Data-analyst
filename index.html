@@ -178,8 +178,32 @@
       <a href="#customerCard" class="underline text-sm mt-auto">View Live Dashboard</a>
     </div>
 
+    <!-- Project 4 -->
+<div class="card p-5 flex flex-col">
+  <div class="text-sm text-gray-400 mb-1">2025</div>
+  <h3 class="font-semibold text-gray-800 mb-2">Corporate Finance Actual vs. Budget</h3>
+  <p class="text-sm text-gray-600 mb-3">
+    Tableau dashboard comparing actual financial performance against budgeted 
+    targets for revenue, expenses, and profit. Includes variance storytelling 
+    and cost-center drilldowns for executive-ready insights.
+  </p>
+  <div class="flex flex-wrap gap-2 mb-3">
+    <span class="px-3 py-1 rounded-full bg-gray-100 text-xs">Tableau</span>
+    <span class="px-3 py-1 rounded-full bg-gray-100 text-xs">Variance Analysis</span>
+    <span class="px-3 py-1 rounded-full bg-gray-100 text-xs">Budgeting</span>
+  </div>
+  <ul class="list-disc pl-5 text-sm text-gray-600 mb-3">
+    <li>Actual vs. budget variance breakdowns</li>
+    <li>Revenue, expense, and profit drilldowns</li>
+    <li>Executive-ready variance storytelling</li>
+  </ul>
+  <a href="#corporateCard" class="underline text-sm mt-auto">View Live Dashboard</a>
+</div>
+
   </div>
 </section>
+
+  
 
 
   <!-- Dashboards -->
@@ -458,6 +482,93 @@
   })();
 </script>
 
+    <!-- =============================== -->
+<!-- Corporate Finance Actual vs Budget Dashboard -->
+<!-- =============================== -->
+<style>
+  .card.corporate-card {
+    border-radius: 1rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    padding: 16px;
+    margin-top: 24px;
+  }
+  .corporate-card h3 { margin-bottom: .75rem; }
+  .corporate-viewport {
+    overflow: hidden;   /* hides Tableau footer */
+    border-radius: .5rem;
+  }
+</style>
+
+<div class="card corporate-card" id="corporateCard">
+  <h3 class="font-medium text-gray-700">Corporate Finance Actual vs. Budget Dashboard</h3>
+  <p class="text-sm text-gray-600 mb-3">
+    <strong>Description:</strong> This dashboard compares actual financial performance 
+    against budgeted targets across revenue, expenses, and profit categories. 
+    It highlights variances, provides drilldowns for cost centers, and supports 
+    executive decision-making through variance storytelling.
+  </p>
+
+  <div class="corporate-viewport" id="corporateViewport">
+    <div class="tableauPlaceholder" id="corporateViz" style="position:relative">
+      <noscript>
+        <a href="#">
+          <img alt="Corporate Finance Actual vs Budget Dashboard"
+               src="https://public.tableau.com/static/images/Co/CorporateFinanceActualvs_BudgetDashboard_17301892335120/Summary/1.png"
+               style="border:none"/>
+        </a>
+      </noscript>
+      <object class="tableauViz" style="display:none;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+        <param name="embed_code_version" value="3"/>
+        <param name="site_root" value=""/>
+        <param name="name" value="CorporateFinanceActualvs_BudgetDashboard_17301892335120/Summary"/>
+        <param name="tabs" value="no"/>
+        <param name="toolbar" value="no"/> <!-- hide toolbar -->
+        <param name="showVizHome" value="n"/> <!-- hide "View on Tableau" -->
+        <param name="static_image" value="https://public.tableau.com/static/images/Co/CorporateFinanceActualvs_BudgetDashboard_17301892335120/Summary/1.png"/>
+        <param name="animate_transition" value="yes"/>
+        <param name="display_static_image" value="yes"/>
+        <param name="display_spinner" value="yes"/>
+        <param name="display_overlay" value="yes"/>
+        <param name="display_count" value="no"/>
+        <param name="language" value="en-US"/>
+      </object>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var viewport = document.getElementById('corporateViewport');
+    var div      = document.getElementById('corporateViz');
+    var obj      = div.getElementsByTagName('object')[0];
+
+    // Load Tableau API
+    var s = document.createElement('script');
+    s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    obj.parentNode.insertBefore(s, obj);
+
+    // Clip footer height to hide "View on Tableau"
+    var CLIP = 48;
+
+    function sizeViz() {
+      var w = viewport.offsetWidth || window.innerWidth;
+      var vizH = (w > 1280) ? 927 :
+                 (w > 1024) ? 927 :
+                 (w >  768) ? 927 : 1627;
+
+      obj.style.width  = '100%';
+      obj.style.height = vizH + 'px';
+      viewport.style.height = (vizH - CLIP) + 'px';
+    }
+
+    sizeViz();
+    window.addEventListener('resize', sizeViz);
+    s.addEventListener('load', function(){ setTimeout(sizeViz, 300); });
+  })();
+</script>
 
 
   <!-- SQL Snippets -->
