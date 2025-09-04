@@ -51,14 +51,14 @@
       <h3 class="font-medium text-gray-700 mb-2">Profile</h3>
       <div class="text-sm mb-1"><span class="text-gray-500">Name</span>: Chelsie Williams</div>
       <div class="text-sm mb-1"><span class="text-gray-500">Location</span>: Houston, TX</div>
-      <div class="text-sm mb-1"><span class="text-gray-500">Email</span>: 
+      <div class="text-sm mb-1"><span class="text-gray-500">Email</span>:
         <a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a>
       </div>
       <div class="text-sm mb-1"><span class="text-gray-500">Phone</span>: (832)-655-9876</div>
-      <div class="text-sm"><span class="text-gray-500">LinkedIn</span>: 
+      <div class="text-sm"><span class="text-gray-500">LinkedIn</span>:
         <a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">View Profile</a>
       </div>
-      <div class="text-sm"><span class="text-gray-500">Resume</span>: 
+      <div class="text-sm"><span class="text-gray-500">Resume</span>:
         <a class="underline" href="Jr.%20Fin%20Analyst%20resume-fin%20template.pdf" target="_blank">Download PDF</a>
       </div>
     </div>
@@ -96,49 +96,39 @@
   <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">Tableau Showcase</h2>
 
-    <!-- Financial Analyst Dashboard (Cleaned) -->
+    <!-- Financial Analyst Dashboard (IFRAME, fully clean) -->
     <div class="card p-5 mb-8">
       <h3 class="font-semibold mb-2">Financial Analyst Dashboard</h3>
-      <div class="tableauPlaceholder" id="vizFinancial">
-        <object class="tableauViz">
-          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> 
-          <param name="embed_code_version" value="3" /> 
-          <param name="name" value="FinancialAnalystDashboard/FinancialDashboard" />
-          <param name="tabs" value="no" />
-          <param name="toolbar" value="no" /> <!-- Hides toolbar/share/download -->
-          <param name="display_count" value="no" />
-        </object>
+      <div class="w-full" style="height:800px;">
+        <iframe
+          title="Financial Analyst Dashboard"
+          src="https://public.tableau.com/views/FinancialAnalystDashboard/FinancialDashboard?:showVizHome=no&:embed=true&:toolbar=no&:display_count=n&:tabs=n"
+          style="width:100%; height:100%; border:0;"
+          allowfullscreen>
+        </iframe>
       </div>
-      <script type="text/javascript"> 
-        var divElement = document.getElementById('vizFinancial'); 
-        var vizElement = divElement.getElementsByTagName('object')[0]; 
-        vizElement.style.width='100%';vizElement.style.height='800px'; 
-        var scriptElement = document.createElement('script'); 
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-        vizElement.parentNode.insertBefore(scriptElement, vizElement); 
-      </script>
     </div>
 
-    <!-- ATM Cashflow Dashboard -->
+    <!-- ATM Cashflow Dashboard (already clean) -->
     <div class="card p-5">
       <h3 class="font-semibold mb-2">ATM Cashflow Analysis</h3>
       <div class="tableauPlaceholder" id="vizATM">
         <object class="tableauViz">
-          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> 
-          <param name="embed_code_version" value="3" /> 
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+          <param name="embed_code_version" value="3" />
           <param name="name" value="ATMcashflowanalysis/ATMTransactionalAnalysis" />
           <param name="tabs" value="no" />
-          <param name="toolbar" value="no" /> <!-- already cleaned -->
+          <param name="toolbar" value="no" />
           <param name="display_count" value="no" />
         </object>
       </div>
-      <script type="text/javascript"> 
-        var divElement = document.getElementById('vizATM'); 
-        var vizElement = divElement.getElementsByTagName('object')[0]; 
-        vizElement.style.width='100%';vizElement.style.height='800px'; 
-        var scriptElement = document.createElement('script'); 
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-        vizElement.parentNode.insertBefore(scriptElement, vizElement); 
+      <script type="text/javascript">
+        var divATM = document.getElementById('vizATM');
+        var atmObj = divATM.getElementsByTagName('object')[0];
+        atmObj.style.width='100%'; atmObj.style.height='800px';
+        var atmScript = document.createElement('script');
+        atmScript.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        atmObj.parentNode.insertBefore(atmScript, atmObj);
       </script>
     </div>
   </section>
