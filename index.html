@@ -9,28 +9,17 @@
     html { scroll-behavior: smooth; }
     .card { border-radius: 1rem; background: white; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
 
-    /* === Hide Tableau footer (View on Tableau + Share/Download) without cutting the top === */
-    .viz-mask {
-      position: relative;
-      overflow: hidden;
-      border-radius: 0.75rem;
-      padding-top: 6px;     /* small breathing room at top */
-      background: #fff;
-    }
+    /* --- Hide Tableau footer (View on Tableau / Share / Download) without clipping the top --- */
+    .viz-mask { position: relative; }
+    .viz-mask--hide-footer { overflow: hidden; }
     .viz-mask--hide-footer::after {
       content: "";
       position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 60px;            /* mask height; adjust if Tableau toolbar height changes */
-      background: #fff;        /* same as page background to blend cleanly */
-      pointer-events: none;    /* ignore clicks */
+      left: 0; right: 0; bottom: 0;
+      height: 48px;              /* mask height for Tableau footer/tool shelf */
+      background: #fff;          /* same as page background */
+      pointer-events: none;      /* let user interactions pass through above */
     }
-    .viz-mask iframe { display: block; width: 100%; }
-
-    /* Make sure the section doesn’t hide under the sticky navbar on anchor jump */
-    #dashboards { scroll-margin-top: 96px; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -74,20 +63,19 @@
       <h3 class="font-medium text-gray-700 mb-2">Profile</h3>
       <div class="text-sm mb-1"><span class="text-gray-500">Name</span>: Chelsie Williams</div>
       <div class="text-sm mb-1"><span class="text-gray-500">Location</span>: Houston, TX</div>
-      <div class="text-sm mb-1"><span class="text-gray-500">Email</span>:
+      <div class="text-sm mb-1">
+        <span class="text-gray-500">Email</span>:
         <a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a>
       </div>
-      <div class="text-sm mb-1"><span class="text-gray-500">Phone</span>: (832)-655-9876</div>
-      <div class="text-sm"><span class="text-gray-500">LinkedIn</span>:
-        <a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">View Profile</a>
-      </div>
-      <div class="text-sm"><span class="text-gray-500">Resume</span>:
-        <a class="underline" href="Jr.%20Fin%20Analyst%20resume-fin%20template.pdf" target="_blank">Download PDF</a>
+      <div class="text-sm mb-3"><span class="text-gray-500">Phone</span>: (832)-655-9876</div>
+      <div class="text-sm space-y-1">
+        <a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" rel="noopener">LinkedIn</a><br/>
+        <a class="underline" href="Jr.%20Fin%20Analyst%20resume-fin%20template.pdf" target="_blank" rel="noopener">Download Résumé (PDF)</a>
       </div>
     </div>
   </header>
 
-  <!-- Skills & Tooling -->
+  <!-- Skills & Tooling (with emojis) -->
   <section id="skills" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">Skills & Tooling</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -115,32 +103,38 @@
     </div>
   </section>
 
-  <!-- Dashboards -->
+  <!-- Featured Projects (placeholder, unchanged) -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 pt-12">
+    <h2 class="text-lg font-semibold mb-4">Featured Projects</h2>
+    <div class="card p-5">
+      <p class="text-sm text-gray-600">Finance-focused dashboards and KPI reporting (examples below).</p>
+    </div>
+  </section>
+
+  <!-- Tableau Dashboards -->
   <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">Tableau Showcase</h2>
 
-    <!-- Financial Analyst Dashboard -->
+    <!-- Financial Analyst Dashboard (Full top visible, footer masked, toolbar/tabs off) -->
     <div class="card p-4 mb-6">
       <h3 class="font-semibold mb-3">Financial Analyst Dashboard</h3>
       <div class="viz-mask viz-mask--hide-footer">
-        <div class='tableauPlaceholder' id='viz1756945661529' style='position: relative'>
+        <div class='tableauPlaceholder' id='vizFinAnalyst' style='position:relative'>
           <noscript>
             <a href='#'>
-              <img alt=' ' src='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1_rss.png' style='border: none' />
+              <img alt='Financial Analyst Dashboard'
+                   src='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1.png'
+                   style='border:none'/>
             </a>
           </noscript>
-          <object class='tableauViz' style='display:none;'>
+          <object class='tableauViz' style='width:100%; min-height:850px; display:block;'>
             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
             <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
             <param name='name' value='FinancialAnalystDashboard/FinancialDashboard' />
             <param name='tabs' value='no' />
             <param name='toolbar' value='no' />
-            <param name='static_image' value='https://public.tableau.com/static/images/Fi/FinancialAnalystDashboard/FinancialDashboard/1.png' />
             <param name='animate_transition' value='yes' />
             <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
             <param name='display_count' value='no' />
             <param name='language' value='en-US' />
           </object>
@@ -148,67 +142,67 @@
       </div>
     </div>
 
-    <!-- ATM Cash Flow Dashboard -->
+    <!-- ATM Cash Flow Dashboard (Full top visible, footer masked, toolbar/tabs off) -->
     <div class="card p-4">
       <h3 class="font-semibold mb-3">ATM Cash Flow Analysis</h3>
       <div class="viz-mask viz-mask--hide-footer">
-        <div class='tableauPlaceholder' id='vizATM1756941629546' style='position: relative'>
+        <div class='tableauPlaceholder' id='vizATM' style='position:relative'>
           <noscript>
             <a href='#'>
-              <img alt='ATM Transactional Analysis' src='https://public.tableau.com/static/images/AT/ATMcashflowanalysis/ATMTransactionalAnalysis/1_rss.png' style='border: none' />
+              <img alt='ATM Transactional Analysis'
+                   src='https://public.tableau.com/static/images/AT/ATMcashflowanalysis/ATMTransactionalAnalysis/1.png'
+                   style='border:none'/>
             </a>
           </noscript>
-          <object class='tableauViz' style='display:none;'>
+          <object class='tableauViz' style='width:100%; min-height:850px; display:block;'>
             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
             <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
             <param name='name' value='ATMcashflowanalysis/ATMTransactionalAnalysis' />
             <param name='tabs' value='no' />
             <param name='toolbar' value='no' />
-            <param name='static_image' value='https://public.tableau.com/static/images/AT/ATMcashflowanalysis/ATMTransactionalAnalysis/1.png' />
             <param name='animate_transition' value='yes' />
             <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
             <param name='display_count' value='no' />
             <param name='language' value='en-US' />
           </object>
         </div>
       </div>
     </div>
+
+    <!-- Load Tableau script once for both -->
+    <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
   </section>
 
   <!-- SQL Snippets -->
   <section id="sql" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">SQL Snippets</h2>
-    <div class="card p-6">
-      <pre class="text-sm">
-WITH m AS (
-  SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter],
+    <div class="card p-5">
+<pre class="bg-gray-50 p-4 rounded-lg text-xs border whitespace-pre-wrap leading-5">WITH m AS (
+  SELECT YEAR([Date]) AS [Year],
+         DATEPART(QUARTER, [Date]) AS [Quarter],
          Revenue, COGS, OpEx
   FROM dbo.Finance
 )
 SELECT [Year], [Quarter],
-       SUM(Revenue) AS Revenue,
-       SUM(Revenue-COGS-OpEx) AS NetIncome
+       SUM(Revenue)              AS Revenue,
+       SUM(Revenue-COGS-OpEx)   AS NetIncome
 FROM m
 GROUP BY [Year], [Quarter]
-ORDER BY [Year], [Quarter];
-      </pre>
+ORDER BY [Year], [Quarter];</pre>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 pt-12">
+  <section id="contact" class="max-w-6xl mx-auto px-4 pt-12 pb-16">
     <h2 class="text-lg font-semibold mb-4">Contact & Links</h2>
-    <div class="card p-6">
-      <p class="mb-2">Get in touch</p>
-      <p><a href="mailto:chelsiewilliamscw3@gmail.com" class="underline">chelsiewilliamscw3@gmail.com</a></p>
-      <p><a href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" class="underline">LinkedIn</a></p>
+    <div class="card p-5">
+      <p class="text-sm text-gray-600 mb-3">Get in touch</p>
+      <div class="space-y-1 text-sm">
+        <a class="underline block" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a>
+        <a class="underline block" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </section>
 
-  <!-- Tableau script loader -->
-  <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
 </body>
 </html>
