@@ -186,7 +186,9 @@
   <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">Tableau Dashboards</h2>
 
-   <!-- Financial Analyst Dashboard (tabs visible, footer hidden, toolbar off) -->
+   <!-- =============================== -->
+<!-- Financial Analyst Dashboard (KPI Performance & Variance Analysis) -->
+<!-- =============================== -->
 <div class="card p-4 mb-6">
   <h3 class="font-semibold mb-3">Financial Analyst Dashboard (KPI Performance & Variance Analysis)</h3>
   <p class="text-sm text-gray-600 mb-3">
@@ -195,27 +197,6 @@
     Users can analyze variance trends, growth breakdowns, and country-level profitability 
     for smarter executive decision-making.
   </p>
-  <!-- existing embed code here -->
-</div>
-
-
-  <style>
-    /* Scope styles to only this viz */
-    .fa-viz-wrap { position: relative; overflow: hidden; }
-    /* Show full top (tabs/header) without clipping */
-    .fa-viz-top-pad { padding-top: 4px; }
-    /* Mask the Tableau footer row (View on Tableau / Share / Download) */
-    .fa-viz-wrap .footer-mask {
-      position: absolute; left: 0; right: 0; bottom: 0;
-      height: 82px;           /* covers the footer strip */
-      background: #ffffff;    /* match page bg */
-      pointer-events: none;
-      content: "";
-    }
-    @media (max-width: 640px){
-      .fa-viz-wrap .footer-mask { height: 110px; }
-    }
-  </style>
 
   <div class="fa-viz-wrap fa-viz-top-pad">
     <div class="tableauPlaceholder" id="vizFinAnalyst" style="position:relative">
@@ -246,34 +227,51 @@
     <!-- Mask the bottom controls/footer -->
     <div class="footer-mask"></div>
   </div>
+</div>
 
-  <script>
-    (function () {
-      var div = document.getElementById('vizFinAnalyst');
-      var vizObject = div.getElementsByTagName('object')[0];
+<style>
+  /* Scope styles to only this viz */
+  .fa-viz-wrap { position: relative; overflow: hidden; }
+  .fa-viz-top-pad { padding-top: 4px; }
+  .fa-viz-wrap .footer-mask {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 82px;
+    background: #ffffff;
+    pointer-events: none;
+    content: "";
+  }
+  @media (max-width: 640px){
+    .fa-viz-wrap .footer-mask { height: 110px; }
+  }
+</style>
 
-      function sizeViz() {
-        var w = div.offsetWidth || 1024;
-        if (w > 900) {
-          vizObject.style.minHeight = '980px';
-          vizObject.style.maxHeight = (w * 0.78) + 'px';  // room for tabs + charts
-        } else if (w > 600) {
-          vizObject.style.minHeight = '900px';
-          vizObject.style.maxHeight = (w * 0.95) + 'px';
-        } else {
-          vizObject.style.minHeight = '1100px';
-          vizObject.style.maxHeight = (w * 1.75) + 'px';
-        }
+<script>
+  (function () {
+    var div = document.getElementById('vizFinAnalyst');
+    var vizObject = div.getElementsByTagName('object')[0];
+
+    function sizeViz() {
+      var w = div.offsetWidth || 1024;
+      if (w > 900) {
+        vizObject.style.minHeight = '980px';
+        vizObject.style.maxHeight = (w * 0.78) + 'px';
+      } else if (w > 600) {
+        vizObject.style.minHeight = '900px';
+        vizObject.style.maxHeight = (w * 0.95) + 'px';
+      } else {
+        vizObject.style.minHeight = '1100px';
+        vizObject.style.maxHeight = (w * 1.75) + 'px';
       }
-      sizeViz();
-      window.addEventListener('resize', sizeViz);
+    }
+    sizeViz();
+    window.addEventListener('resize', sizeViz);
 
-      // Load Tableau API
-      var s = document.createElement('script');
-      s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizObject.parentNode.insertBefore(s, vizObject);
-    })();
-  </script>
+    var s = document.createElement('script');
+    s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizObject.parentNode.insertBefore(s, vizObject);
+  })();
+</script>
+
 </div>
 <!-- =============================== -->
 <!-- ATM Cash Flow (clean card, clip) -->
