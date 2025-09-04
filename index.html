@@ -170,7 +170,7 @@
 <!-- ATM Cash Flow (clean card, clip) -->
 <!-- =============================== -->
 <style>
-  /* Match the Financial Analyst card */
+  /* Match your Financial Analyst card styling */
   .card.atm-card{
     border-radius: 1rem;
     background: #fff;
@@ -181,17 +181,17 @@
   }
   .atm-card h3{ margin-bottom: .75rem; }
 
-  /* Viewport that hides anything below the visible area (footer) */
+  /* Viewport that hides Tableau’s bottom footer area */
   .atm-viewport{
-    overflow: hidden;      /* <- the key: hides the View on Tableau footer */
-    border-radius: .5rem;  /* soft corners to match */
+    overflow: hidden;      /* hides the “View on Tableau” area */
+    border-radius: .5rem;
   }
 </style>
 
-<div class="card atm-card">
+<div class="card atm-card" id="atmCard">
   <h3 class="font-medium text-gray-700">ATM Cash Flow Analysis</h3>
 
-  <!-- This wrapper clips the bottom so the footer never shows -->
+  <!-- This wrapper clips the very bottom so the footer never shows -->
   <div class="atm-viewport" id="atmViewport">
     <div class="tableauPlaceholder" id="atmViz" style="position:relative">
       <noscript>
@@ -208,7 +208,6 @@
         <param name="name" value="ATMcashflowanalysis/ATMTransactionalAnalysis"/>
         <param name="tabs" value="no"/>
         <param name="toolbar" value="no"/>
-        <!-- This helps in some embeds but the clip guarantees it's hidden -->
         <param name="showVizHome" value="n"/>
         <param name="static_image" value="https://public.tableau.com/static/images/AT/ATMcashflowanalysis/ATMTransactionalAnalysis/1.png"/>
         <param name="animate_transition" value="yes"/>
@@ -233,15 +232,13 @@
     s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     obj.parentNode.insertBefore(s, obj);
 
-    // Height math:
-    //   iframe height = full viz height
-    //   viewport height = iframe height - CLIP (so the footer is below the fold)
-    var CLIP = 48; // pixels to hide at the bottom (tweak if needed)
+    // Clip a bit off the bottom so the footer can't appear
+    var CLIP = 48; // increase to 56–60 if you ever see the footer peek out
 
     function sizeViz() {
       var w = viewport.offsetWidth || window.innerWidth;
 
-      // Choose a comfortable height per breakpoint so the whole dashboard shows
+      // Comfortable heights by breakpoint
       var vizH = (w > 1280) ? 1200 :
                  (w > 1024) ? 1080 :
                  (w >  768) ? 1000 : 1400;
@@ -249,13 +246,11 @@
       obj.style.width  = '100%';
       obj.style.height = vizH + 'px';
 
-      viewport.style.height = (vizH - CLIP) + 'px'; // <- clips footer off
+      viewport.style.height = (vizH - CLIP) + 'px'; // <-- hides the footer
     }
 
     sizeViz();
     window.addEventListener('resize', sizeViz);
-
-    // After the API loads, size again (in case Tableau adjusts layout)
     s.addEventListener('load', function(){ setTimeout(sizeViz, 300); });
   })();
 </script>
