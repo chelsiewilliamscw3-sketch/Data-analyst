@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chelsie Williams — Financial Analyst Portfolio</title>
+  <title>Chelsie Williams — Finance Analyst Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html { scroll-behavior: smooth; }
@@ -33,10 +33,10 @@
   <header class="max-w-6xl mx-auto px-4 pt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
     <!-- Left Side -->
     <div>
-      <h1 class="text-3xl md:text-4xl font-semibold leading-tight">Financial Analyst Portfolio and Insights</h1>
+      <h1 class="text-3xl md:text-4xl font-semibold leading-tight">Data Analyst Portfolio and Insights</h1>
       <p class="text-sm md:text-base text-gray-600 mt-3 max-w-3xl">
-        Financial analyst with 5+ years' experience delivering impactful analytics in corporate finance, energy, and retail sectors.
-        Skilled in SQL, Tableau, Power BI, and Excel — building dashboards, financial models, and KPI reporting that turn raw numbers into actionable strategies.
+        Data analyst with 5+ years' experience delivering impactful analytics in cybersecurity, energy, retail, and financial services.
+        Skilled in SQL, Tableau, Power BI, and Excel — turning messy data into decision-ready dashboards and insights.
       </p>
       <div class="flex flex-wrap gap-3 mt-5">
         <span class="px-4 py-2 rounded-full bg-white border text-sm">Excel</span>
@@ -59,7 +59,7 @@
         <a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">View Profile</a>
       </div>
       <div class="text-sm"><span class="text-gray-500">Resume</span>: 
-        <a class="underline" href="Jr.%20Fin%20Analyst%20resume-fin%20template.pdf" target="_blank">Download</a>
+        <a class="underline" href="Jr.%20Fin%20Analyst%20resume-fin%20template.pdf" target="_blank">Download PDF</a>
       </div>
     </div>
   </header>
@@ -79,7 +79,7 @@
         <div class="text-3xl mb-2">📊</div>
         <h3 class="font-semibold mb-2">Visualization & Reporting</h3>
         <p class="text-sm text-gray-600">
-          Tableau dashboards and executive-ready Power BI reports highlighting KPIs, trends, and profitability.
+          Tableau dashboards and executive-ready PowerPoint reports highlighting KPIs, trends, and profitability.
         </p>
       </div>
       <div class="card p-5">
@@ -92,83 +92,70 @@
     </div>
   </section>
 
-  <!-- Featured Projects -->
-  <section id="projects" class="max-w-6xl mx-auto px-4 pt-12">
-    <h2 class="text-lg font-semibold mb-4">Featured Projects</h2>
-    <div class="card p-6">
-      <p class="text-sm text-gray-600">Finance-focused dashboards and KPI reporting (examples below).</p>
-    </div>
-  </section>
-
-  <!-- Tableau Dashboards -->
+  <!-- Tableau Showcase -->
   <section id="dashboards" class="max-w-6xl mx-auto px-4 pt-12">
-    <h2 class="text-lg font-semibold mb-4">Tableau Showcase</h2>
+    <h2 class="text-lg font-semibold mb-2">Tableau Showcase</h2>
+    <p class="text-sm text-gray-600 mb-4">
+      Interactive dashboards demonstrating financial insights, variance analysis, and operational reporting.
+    </p>
 
-    <!-- Financial Analyst Dashboard -->
-    <div class="card p-4 mb-6">
-      <h3 class="font-semibold mb-3">Financial Analyst Dashboard</h3>
-
-      <style>
-        .fa-viz-wrap { position: relative; overflow: hidden; }
-        .fa-viz-top-pad { padding-top: 4px; }
-        .fa-viz-wrap .footer-mask {
-          position: absolute; left: 0; right: 0; bottom: 0;
-          height: 82px; background: #ffffff;
-          pointer-events: none; content: "";
-        }
-      </style>
-
-      <div class="fa-viz-wrap fa-viz-top-pad">
-        <div class="tableauPlaceholder" id="vizFinAnalyst" style="position:relative">
-          <object class="tableauViz" style="width:100%; min-height:980px; display:block;">
-            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-            <param name="embed_code_version" value="3" />
-            <param name="site_root" value="" />
-            <param name="name" value="FinancialAnalystDashboard/FinancialDashboard" />
-            <param name="tabs" value="yes" />
-            <param name="toolbar" value="no" />
-          </object>
-        </div>
-        <div class="footer-mask"></div>
+    <!-- Existing Financial Analyst Dashboard -->
+    <div class="mb-12">
+      <h3 class="font-medium mb-2">Finance Analyst Dashboard</h3>
+      <div class='tableauPlaceholder' id='vizFinance' style='position: relative'>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+          <param name='embed_code_version' value='3' /> 
+          <param name='site_root' value='' />
+          <param name='name' value='FinancialAnalystDashboard/FinancialDashboard' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='showVizHome' value='n' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
       </div>
-      <script>
-        (function () {
-          var div = document.getElementById('vizFinAnalyst');
-          var vizObject = div.getElementsByTagName('object')[0];
-          function sizeViz() {
-            var w = div.offsetWidth || 1024;
-            if (w > 900) { vizObject.style.minHeight = '980px'; }
-            else if (w > 600) { vizObject.style.minHeight = '900px'; }
-            else { vizObject.style.minHeight = '1100px'; }
-          }
-          sizeViz();
-          window.addEventListener('resize', sizeViz);
-          var s = document.createElement('script');
-          s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizObject.parentNode.insertBefore(s, vizObject);
-        })();
+      <script type='text/javascript'>                    
+        var divElement = document.getElementById('vizFinance');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        vizElement.style.width='100%';vizElement.style.height='800px';                    
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
       </script>
     </div>
 
-    <!-- ATM Cash Flow Dashboard -->
-    <div class="card p-4 mb-6">
-      <h3 class="font-semibold mb-3">ATM Cash Flow Analysis</h3>
-      <div class="tableauPlaceholder" id="vizATM" style="position: relative">
-        <object class="tableauViz" style="width:100%; min-height:1000px; display:block;">
-          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
-          <param name="name" value="ATMcashflowanalysis/ATMTransactionalAnalysis"/>
-          <param name="tabs" value="no"/>
-          <param name="toolbar" value="no"/>
+    <!-- ATM Cash Flow Analysis Dashboard -->
+    <div>
+      <h3 class="font-medium mb-2">ATM Cash Flow Analysis</h3>
+      <div class='tableauPlaceholder' id='vizATM' style='position: relative'>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+          <param name='embed_code_version' value='3' /> 
+          <param name='site_root' value='' />
+          <param name='name' value='ATMcashflowanalysis/ATMTransactionalAnalysis' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='showVizHome' value='n' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
         </object>
       </div>
-      <script>
-        (function () {
-          var div = document.getElementById('vizATM');
-          var vizObject = div.getElementsByTagName('object')[0];
-          var s = document.createElement('script');
-          s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizObject.parentNode.insertBefore(s, vizObject);
-        })();
+      <script type='text/javascript'>                    
+        var divElement = document.getElementById('vizATM');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        vizElement.style.width='100%';vizElement.style.height='800px';                    
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
       </script>
     </div>
   </section>
@@ -176,29 +163,27 @@
   <!-- SQL Snippets -->
   <section id="sql" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">SQL Snippets</h2>
-    <div class="card p-6 font-mono text-sm">
-      WITH m AS (
-        SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter],
-               Revenue, COGS, OpEx
-        FROM dbo.Finance
-      )
-      SELECT [Year], [Quarter],
-             SUM(Revenue) AS Revenue,
-             SUM(Revenue-COGS-OpEx) AS NetIncome
-      FROM m
-      GROUP BY [Year], [Quarter]
-      ORDER BY [Year], [Quarter];
-    </div>
+    <pre class="bg-gray-50 p-4 rounded text-sm overflow-x-auto">
+WITH m AS (
+  SELECT YEAR([Date]) AS [Year], DATEPART(QUARTER, [Date]) AS [Quarter],
+         Revenue, COGS, OpEx
+  FROM dbo.Finance
+)
+SELECT [Year], [Quarter],
+       SUM(Revenue) AS Revenue,
+       SUM(Revenue-COGS-OpEx) AS NetIncome
+FROM m
+GROUP BY [Year], [Quarter]
+ORDER BY [Year], [Quarter];
+    </pre>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-4 pt-12 mb-20">
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 pt-12 pb-16">
     <h2 class="text-lg font-semibold mb-4">Contact & Links</h2>
-    <div class="card p-6 text-sm">
-      <p class="mb-2">Get in touch</p>
-      <p><a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a></p>
-      <p><a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">LinkedIn</a></p>
-    </div>
+    <p class="text-sm text-gray-600 mb-2">Get in touch</p>
+    <p><a class="underline" href="mailto:chelsiewilliamscw3@gmail.com">chelsiewilliamscw3@gmail.com</a></p>
+    <p><a class="underline" href="https://www.linkedin.com/in/chelsie-williams-31a934166" target="_blank">LinkedIn</a></p>
   </section>
 
 </body>
