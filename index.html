@@ -256,33 +256,6 @@
 </script>
 
 
-    // Responsive sizing
-    function sizeViz() {
-      var w = div.offsetWidth || window.innerWidth;
-      obj.style.width  = '100%';
-      obj.style.height = (w > 900 ? 1200 : w > 600 ? 1000 : 1400) + 'px';
-    }
-    sizeViz();
-    window.addEventListener('resize', sizeViz);
-
-    // Load Tableau API
-    var s = document.createElement('script');
-    s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    obj.parentNode.insertBefore(s, obj);
-
-    // Small safety: once the iframe is in, hide any leftover footer/toolbar nodes
-    var tryClean = function () {
-      var ifr = div.querySelector('iframe');
-      if (!ifr) { requestAnimationFrame(tryClean); return; }
-      // Best-effort: remove sibling nodes that sometimes carry footer artifacts
-      var a = div.querySelector('a[href*="public.tableau.com"]');
-      if (a && a.parentNode) a.parentNode.style.display = 'none';
-    };
-    requestAnimationFrame(tryClean);
-  })();
-</script>
-
-
   <!-- SQL Snippets -->
   <section id="sql" class="max-w-6xl mx-auto px-4 pt-12">
     <h2 class="text-lg font-semibold mb-4">SQL Snippets</h2>
