@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATM Cash Flow Analysis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .card { border-radius: 1rem; background: #fff; border: 1px solid #e5e7eb; box-shadow: 0 1px 2px rgba(0,0,0,.04); padding: 16px; }
+    .atm-viewport { overflow: hidden; border-radius: .5rem; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-6">
+  <div class="card">
+    <h3 class="font-semibold mb-3">ATM Cash Flow Analysis</h3>
+    <p class="text-sm text-gray-600 mb-3">
+      <strong>Description:</strong> Tracks ATM transactions, daily volumes, and reasons for failures.  
+      Highlights operational performance and pinpoints outages, hardware malfunctions, or cash availability issues.
+    </p>
+    <div class="atm-viewport" id="atmViewport">
+      <div class="tableauPlaceholder" id="atmViz" style="position:relative">
+        <object class="tableauViz" style="width:100%; display:block;">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+          <param name="embed_code_version" value="3"/>
+          <param name="site_root" value=""/>
+          <param name="name" value="ATMcashflowanalysis/ATMTransactionalAnalysis"/>
+          <param name="tabs" value="no"/>
+          <param name="toolbar" value="no"/>
+        </object>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var div = document.getElementById('atmViz');
+      var obj = div.getElementsByTagName('object')[0];
+      var s = document.createElement('script');
+      s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      obj.parentNode.insertBefore(s, obj);
+    })();
+  </script>
+</body>
+</html>
