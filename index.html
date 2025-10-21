@@ -598,6 +598,45 @@
   })();
 </script>
 
+    <!-- =============================== -->
+<!-- Product Performance Insights (Tableau) -->
+<!-- =============================== -->
+<style>
+  .card.product-card {
+    border-radius: 1rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+    padding: 16px;
+    margin-top: 24px;
+  }
+  .product-viewport { position: relative; overflow: hidden; border-radius: .5rem; }
+  /* height mask to hide "View on Tableau" footer */
+  .product-viewport .mask { position: absolute; left:0; right:0; bottom:0; height: 56px; background:#fff; pointer-events:none; }
+</style>
+
+<div class="card product-card" id="productPerformanceCard">
+  <h3 class="font-medium text-gray-700">Product Performance Insights Dashboard</h3>
+  <p class="text-sm text-gray-600 mb-3">
+    Interactive Tableau dashboard showing product trends: transactions, cycle time, error rate, feature utilization,
+    and cost efficiency. Footer clipped for a clean portfolio look.
+  </p>
+
+  <div class="product-viewport">
+    <div class="relative" style="padding-top:62%">
+      <iframe
+        title="Product Performance Insights"
+        src="https://public.tableau.com/views/ProductPerformanceInsightsDashboard/Dashboard2?:showVizHome=no&:embed=y&:toolbar=no"
+        class="absolute inset-0 w-full h-full"
+        frameborder="0"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+      <div class="mask"></div>
+    </div>
+  </div>
+</div>
+
 
   <!-- SQL Snippets -->
   <section id="sql" class="max-w-6xl mx-auto px-4 pt-12">
