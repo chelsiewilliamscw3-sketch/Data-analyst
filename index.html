@@ -621,8 +621,8 @@
   })();
 </script>
 
-    <!-- =============================== -->
-<!-- Product Performance Insights (Tableau) -->
+ <!-- =============================== -->
+<!-- Product Performance Insights (Tableau) – match Corporate sizing -->
 <!-- =============================== -->
 <style>
   .card.product-card {
@@ -633,26 +633,70 @@
     padding: 16px;
     margin-top: 24px;
   }
-  .product-viewport { position: relative; overflow: hidden; border-radius: .5rem; }
-  /* height mask to hide "View on Tableau" footer */
-  .product-viewport .mask { position: absolute; left:0; right:0; bottom:0; height: 56px; background:#fff; pointer-events:none; }
+  .product-viewport { overflow: hidden; border-radius: .5rem; }
 </style>
 
 <div class="card product-card" id="productPerformanceCard">
   <h3 class="font-medium text-gray-700">Product Performance Insights Dashboard</h3>
-  
-  <div class="product-viewport">
-    <div class="relative" style="padding-top:62%">
-      <iframe
-        title="Product Performance Insights"
-        src="https://public.tableau.com/views/ProductPerformanceInsightsDashboard/Dashboard2?:showVizHome=no&:embed=y&:toolbar=no"
-        class="absolute inset-0 w-full h-full"
-        frameborder="0"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
-      <div class="mask"></div>
+
+  <div class="product-viewport" id="productViewport">
+    <div class="tableauPlaceholder" id="productViz" style="position:relative">
+      <noscript>
+        <a href="#">
+          <img alt="Product Performance Insights Dashboard"
+               src="https://public.tableau.com/static/images/Pr/ProductPerformanceInsightsDashboard/Dashboard2/1.png"
+               style="border:none"/>
+        </a>
+      </noscript>
+      <object class="tableauViz" style="display:none;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+        <param name="embed_code_version" value="3"/>
+        <param name="site_root" value=""/>
+        <param name="name" value="ProductPerformanceInsightsDashboard/Dashboard2"/>
+        <param name="tabs" value="no"/>
+        <param name="toolbar" value="no"/>
+        <param name="showVizHome" value="n"/>
+        <param name="animate_transition" value="yes"/>
+        <param name="display_static_image" value="yes"/>
+        <param name="display_spinner" value="yes"/>
+        <param name="display_overlay" value="yes"/>
+        <param name="display_count" value="no"/>
+        <param name="language" value="en-US"/>
+      </object>
     </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var viewport = document.getElementById('productViewport');
+    var div      = document.getElementById('productViz');
+    var obj      = div.getElementsByTagName('object')[0];
+
+    // Load Tableau API
+    var s = document.createElement('script');
+    s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    obj.parentNode.insertBefore(s, obj);
+
+    // Use the SAME sizing as Corporate so heights match
+    var CLIP = 48; // hides the "View on Tableau" footer
+
+    function sizeViz() {
+      var w = viewport.offsetWidth || window.innerWidth;
+      var vizH = (w > 1280) ? 927 :
+                 (w > 1024) ? 927 :
+                 (w >  768) ? 927 : 1627;
+
+      obj.style.width  = '100%';
+      obj.style.height = vizH + 'px';
+      viewport.style.height = (vizH - CLIP) + 'px';
+    }
+
+    sizeViz();
+    window.addEventListener('resize', sizeViz);
+    s.addEventListener('load', function(){ setTimeout(sizeViz, 300); });
+  })();
+</script>
   </div>
 </div>
 
