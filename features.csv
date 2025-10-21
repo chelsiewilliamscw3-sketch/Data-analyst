@@ -1,0 +1,7 @@
+feature_code,feature_name,module,target_sla_hours
+FEA001,Order Creation,Core,3
+FEA002,Document Upload,Files,2
+FEA003,Title Search,Search,5
+FEA004,Escrow Disbursement,Payments,4
+FEA005,Report Generation,Reporting,3
+FEA006,Audit Trail,Compliance,2
