@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Product Performance Insights Dashboard (STEPS Simulation)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {font-family: system-ui, Arial, sans-serif; margin: 24px; max-width: 1100px;}
+    h1 {margin-bottom: 4px;}
+    .sub {color:#666; margin-bottom: 20px;}
+    .grid {display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin: 20px 0;}
+    .card {border:1px solid #eee; border-radius:12px; padding:16px; box-shadow: 0 1px 4px rgba(0,0,0,.05);}
+    .kpis {display:flex; gap:12px; flex-wrap: wrap;}
+    .kpi {flex:1 1 160px; border:1px solid #eee; border-radius:12px; padding:12px;}
+    a.btn {display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid #111; text-decoration:none; margin-right:8px;}
+    .muted {color:#666; font-size: 0.95rem;}
+    img {max-width:100%; border-radius:12px; border:1px solid #eee;}
+    .list a {display:block; margin:6px 0;}
+  </style>
+</head>
+<body>
+
+<h1>Product Performance Insights Dashboard</h1>
+<p class="sub">STEPS-style simulation — product metrics, efficiency, adoption, and cost trends (SQL → Power BI → executive insights).</p>
+
+<div class="kpis">
+  <div class="kpi"><strong>Transactions</strong><br><span class="muted">Apr–Sep 2025</span></div>
+  <div class="kpi"><strong>Avg Cycle Time</strong><br><span class="muted">Target vs. Actual</span></div>
+  <div class="kpi"><strong>Error Rate</strong><br><span class="muted">By month & feature</span></div>
+  <div class="kpi"><strong>Cost / Transaction</strong><br><span class="muted">Allocated monthly</span></div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h3>Project Summary</h3>
+    <p>Built a product analytics simulation that tracks performance and adoption across operational workflows. Prepared data with SQL and Excel, then visualized KPIs in Power BI—processing time, transaction volume, error rates, feature utilization, and allocated cost per transaction. Included target-vs-actual comparisons and region/department drill-downs.</p>
+  </div>
+
+  <div class="card">
+    <h3>Data & SQL</h3>
+    <div class="list">
+      <a href="features.csv">features.csv</a>
+      <a href="users.csv">users.csv</a>
+      <a href="transactions.csv">transactions.csv</a>
+      <a href="costs_monthly.csv">costs_monthly.csv</a>
+      <a href="targets.csv">targets.csv</a>
+      <a href="steps_schema_and_queries.sql">SQL: schema & KPI queries</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Key Metrics</h3>
+    <ul>
+      <li>Transactions over time & feature utilization share</li>
+      <li>Average processing time (cycle hours) vs. targets</li>
+      <li>Error/failed transaction rate by month & feature</li>
+      <li>Allocated cost per transaction (monthly costs ÷ volume)</li>
+      <li>Region × Department performance snapshot</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Insights & Recommendations</h3>
+    <ul>
+      <li>Cycle time decreased MoM after release v2.x; maintain rollout cadence.</li>
+      <li>Error clusters concentrated in <em>Document Upload</em> during peak hours; prioritize validation fixes.</li>
+      <li>South region shows longer cycle times; review staffing and training plans.</li>
+      <li>Cost per transaction trending down with volume; continue optimizing infra spend.</li>
+    </ul>
+  </div>
+</div>
+
+<p>
+  <a class="btn" href="index.html">← Back to Portfolio</a>
+</p>
+
+</body>
+</html>
